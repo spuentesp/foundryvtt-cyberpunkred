@@ -28,7 +28,7 @@
     <div class="cpr-nav-item"><a class="item" data-tab="biography">{{localize "CPRED.bio"}}</a></div>
     <div class="cpr-nav-item"><a class="item" data-tab="appearance">{{localize "CPRED.appearance"}}</a></div>
     <div class="cpr-nav-item"><a class="item" data-tab="attrnskills">{{localize "CPRED.attrnskills"}}</a></div>
-    <div class="cpr-nav-item"><a class="item" data-tab="combatsetup">{{localize "CPRED.combatsetup"}}</a></div>
+    <div class="cpr-nav-item"><a class="item" data-tab="armorsetup">{{localize "CPRED.armorsetup"}}</a></div>
     <div class="cpr-nav-item"><a class="item" data-tab="humanityarray">{{localize "CPRED.humanitytrack"}}</a></div>
     <div class="cpr-nav-item"><a class="item" data-tab="modlog">{{localize "CPRED.modlog"}}</a></div>
     {{#if data.settings.showtabs.netrunner}}
@@ -392,8 +392,8 @@
         {{/if}}
         {{/each}} </div>
       {{/each}} </div>
-    {{!-- Combat Setup Tab --}}
-    <div class="tab cprgraphics" data-group="primary" data-tab="combatsetup"> {{localize "CPRED.underconstruction"}}
+    {{!-- Armor Setup Tab --}}
+    <div class="tab cprgraphics" data-group="primary" data-tab="armorsetup">
       <h3>{{localize "CPRED.armorheading"}}</h3>
       <li class="flexrow">
         <div>{{localize "CPRED.name"}}</div>
@@ -446,54 +446,8 @@
           <input type="number" name="data.armorsetup.armorshield.remain" value="{{data.armorsetup.armorshield.remain}}" readonly>
         </div>
       </li>
-      {{#if data.settings.prefs.simpleCombatSetup}}
-      <h3>{{localize "CPRED.weapons"}}</h3>
-      {{localize "CPRED.weaponsheader"}}
-      <li class="flexrow">
-        <div>{{localize "CPRED.name"}}</div>
-        <div>{{localize "CPRED.damage"}}</div>
-        <div>{{localize "CPRED.skill"}}</div>
-      </li>
-      {{#each data.weaponsetup as |item key|}}
-      <li class="flexrow" data-item-id="{{item.id}}">
-        <div>
-          <input type="text" name="data.weaponsetup.{{key}}.name" value="{{item.name}}">
-        </div>
-        <div>
-          <input type="text" name="data.weaponsetup.{{key}}.damage" value="{{item.damage}}">
-        </div>
-        <div>
-          <select name="data.weaponsetup.{{key}}.skill">
-            
-              {{#select item.skill}}
-                {{#if ../data.backend.jsk}}
-            
-            <option value="hidden">{{localize "CPRED.hidden"}}</option>
-            <option value="brawling">{{localize "CPRED.brawling"}}</option>
-            <option value="marksmanship">{{localize "CPRED.marksmanship"}}</option>
-            <option value="meleeweapon">{{localize "CPRED.meleeweapon"}}</option>
-            
-                {{/if}}
-                {{#if ../data.backend.core}}
-            
-            <option value="hidden">{{localize "CPRED.hidden"}}</option>
-            <option value="autofire">{{localize "CPRED.autofire"}}</option>
-            <option value="brawling">{{localize "CPRED.brawling"}}</option>
-            <option value="meleeweapon">{{localize "CPRED.meleeweapon"}}</option>
-            <option value="archery">{{localize "CPRED.archery"}}</option>
-            <option value="handgun">{{localize "CPRED.handgun"}}</option>
-            <option value="shoulderarms">{{localize "CPRED.shoulderarms"}}</option>
-            <option value="heavyweapons">{{localize "CPRED.heavyweapons"}}</option>
-            
-                {{/if}}
-              {{/select}}
-          
-          </select>
-        </div>
-      </li>
-      {{/each}}
-      {{/if}} </div>
-    {{!-- Combat Tab --}}
+    {{!-- Armor Tab --}}
+
     <div class="tab cprgraphics" data-group="primary" data-tab="combat">
     {{!-- Bullet List Indicators for Current HP and Luck --}}
     <ol class="grid grid-2col">
@@ -506,7 +460,50 @@
           </ol>
         </div>
         {{!-- HEALTH POOL END --}}
-        
+
+      {{!-- ARMOR POOL START --}}
+      <div class="cprgraphics">
+        <h3>{{localize "CPRED.armorhead"}} ({{localize "CPRED.reduction"}} : {{data.combatstats.armorhead.remain}})</h3>
+        {{{buildDamageTrack data.combatstats.armorsetup.armorhead.remain data.combatstats.armorsetup.armorhead.value}}}<br>
+        <ol class="grid grid-8col">
+           <i class="grid alterhealth clickable" data-change="-1">-1, Regular Hit</i>
+          <i class="grid alterhealth clickable" data-change="-2">-2, AP Hit</i>
+          <i class="grid alterhealth clickable" data-change="+1">+1</i>
+          <i class="grid alterhealth clickable" data-change="-9999">{{localize "CPRED.zero"}}</i>
+          <i class="grid alterhealth clickable" data-change="+9999">{{localize "CPRED.full"}}</i>
+        </ol>
+      </div>
+
+      <div class="cprgraphics">
+        <h3>{{localize "CPRED.armorbody"}} ({{localize "CPRED.reduction"}} : {{data.combatstats.armorsetup.armorbody.remain}})</h3>
+        {{{buildDamageTrack data.combatstats.armorsetup.armorbody.remain data.combatstats.armorsetup.armorbody.value}}}<br>
+        <ol class="grid grid-8col">
+          <i class="grid alterhealth clickable" data-change="-1">-1, Regular Hit</i>
+          <i class="grid alterhealth clickable" data-change="-2">-2, AP Hit</i>
+          <i class="grid alterhealth clickable" data-change="-9999">{{localize "CPRED.zero"}}</i>
+          <i class="grid alterhealth clickable" data-change="+9999">{{localize "CPRED.full"}}</i>
+        </ol>
+      </div>
+
+      {{#if data.backend.jsk}}
+      <div class="cprgraphics">
+        <h3>{{localize "CPRED.armorshield"}} ({{data.combatstats.armorsetup.armorshield.remain}} / {{data.combatstats.armorsetup.armorshield.value}})</h3>
+        {{{buildDamageTrack data.combatstats.armorsetup.armorshield.remain data.combatstats.armorsetup.armorshield.value}}}<br>
+        <ol class="grid grid-8col">
+          <i class="grid alterhealth clickable" data-change="-10">-10</i>
+          <i class="grid alterhealth clickable" data-change="-5">-5</i>
+          <i class="grid alterhealth clickable" data-change="-1">-1</i>
+          <i class="grid alterhealth clickable" data-change="+10">+10</i>
+          <i class="grid alterhealth clickable" data-change="+5">+5</i>
+          <i class="grid alterhealth clickable" data-change="+1">+1</i>
+          <i class="grid alterhealth clickable" data-change="-9999">{{localize "CPRED.zero"}}</i> <i class="grid alterhealth clickable" data-change="+9999">{{localize "CPRED.full"}}</i>
+        </ol>
+      </div>
+      {{!-- armor POOL END --}}
+
+
+
+
         {{!-- LUCK POOL START --}}
         <div class="cprgraphics">
           <h3>{{localize "CPRED.luckpool"}} ({{data.combatstats.luckpool.value}} / {{data.combatstats.luckpool.max}})</h3>
@@ -516,7 +513,7 @@
           </ol>
         </div>
         {{!-- LUCK POOL END --}}
-        
+
         {{!-- ROLL MODIFIERS START --}}
         {{!-- TODO: To make internal tabs need to override the _onChangeTab(event, tabs, active) method in your sheet class. Check out module/actor/sheet/base.js in the starfinder system. --}}
         <div class="cprgraphics">
@@ -538,7 +535,7 @@
           <label class="clickable modlist resetallmods">{{localize "CPRED.modclicktoreset"}}</label>
         </div>
         {{!-- ROLL MODIFIERS END  --}}
-        
+
         {{!-- SPECIAL ROLLS START --}}
         <div class="cprgraphics">
           <h3>{{localize "CPRED.specialrolls"}}</h3>
@@ -570,7 +567,7 @@
         {{!-- SPECIAL ROLLS END --}}
       </ol>
 
-              
+
         {{!-- ITEM COMBAT START --}}
         {{#if data.settings.prefs.itemCombatSetup}}
         <div class="cprgraphics">
@@ -590,26 +587,7 @@
           {{/each}} </div>
         {{/if}}
         {{!-- ITEM COMBAT END --}}
-        
-        {{!-- SIMPLE COMBAT START --}}
-        {{#if data.settings.prefs.simpleCombatSetup}}
-        <div class="cprgraphics">
-          <h3>{{localize "CPRED.simplecombatsection"}}</h3>
-          {{#each data.weaponsetup as |item key|}}
-          {{#if_not_eq item.skill "hidden"}}
-          <li class="flexrow" data-item-id="{{item.id}}">
-            <label class="cpr-weaponinlinebox">{{item.name}}</label>
-            <div class="rollable cpr-weaponinlinebox" data-label="{{item.name}}" data-roll="{{rollSkill item.skill}}">{{localize "CPRED.attack"}}</div>
-            <div class="rollable cpr-weaponinlinebox" data-label="{{item.name}}" data-roll="{{rollDamage item.damage}}">{{localize "CPRED.damage"}}</div>
-          </li>
-          {{/if_not_eq}}
-          {{/each}}
-        </div>
-        {{/if}}
-        {{!-- SIMPLE COMBAT END --}}
 
-      
-      
       {{!-- SKILLS START --}}
         <div class="cprgraphics">
           <h3>{{localize "CPRED.skills"}}</h3>
@@ -764,4 +742,4 @@
 
   {{/if}} {{!-- Here ends the main if data.dataprepcomplete --}}
 </form>
-{{!-- Here ends the main form --}} 
+{{!-- Here ends the main form --}}

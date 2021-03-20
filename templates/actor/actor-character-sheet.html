@@ -462,12 +462,24 @@
         </div>
         {{!-- HEALTH POOL END --}}
 
+
+        {{!-- LUCK POOL START --}}
+        <div class="cprgraphics">
+          <h3>{{localize "CPRED.luckpool"}} ({{data.combatstats.luckpool.value}} / {{data.combatstats.luckpool.max}})</h3>
+          {{{buildLuckTrack data.combatstats.luckpool.value data.combatstats.luckpool.max}}}<br>
+          <ol class="grid grid-4col">
+            <i class="grid alterluck clickable" data-change="-1">{{localize "CPRED.spend"}}</i> <i class="grid alterluck clickable" data-change="+1">{{localize "CPRED.earn"}}</i> <i class="grid alterluck clickable" data-change="-9999">{{localize "CPRED.zero"}}</i> <i class="grid alterluck clickable" data-change="+9999">{{localize "CPRED.full"}}</i>
+          </ol>
+        </div>
+        {{!-- LUCK POOL END --}}
+
+
       {{!-- ARMOR POOL START --}}
       <div class="cprgraphics">
         <h3>{{localize "CPRED.armorhead"}} ({{localize "CPRED.reduction"}} : {{data.combatstats.armorhead.remain}})</h3>
-        {{{buildDamageTrack data.combatstats.armorsetup.armorhead.remain data.combatstats.armorsetup.armorhead.value}}}<br>
+        {{{buildHeadArmorTrack data.combatstats.armorsetup.armorhead.remain data.combatstats.armorsetup.armorhead.value}}}<br>
         <ol class="grid grid-8col">
-           <i class="grid alterhealth clickable" data-change="-1">-1, Regular Hit</i>
+          <i class="grid alterhealth clickable" data-change="-1">-1, Regular Hit</i>
           <i class="grid alterhealth clickable" data-change="-2">-2, AP Hit</i>
           <i class="grid alterhealth clickable" data-change="+1">+1</i>
           <i class="grid alterhealth clickable" data-change="-9999">{{localize "CPRED.zero"}}</i>
@@ -477,7 +489,7 @@
 
       <div class="cprgraphics">
         <h3>{{localize "CPRED.armorbody"}} ({{localize "CPRED.reduction"}} : {{data.combatstats.armorsetup.armorbody.remain}})</h3>
-        {{{buildDamageTrack data.combatstats.armorsetup.armorbody.remain data.combatstats.armorsetup.armorbody.value}}}<br>
+        {{{buildBodyArmorTrack data.combatstats.armorsetup.armorbody.remain data.combatstats.armorsetup.armorbody.value}}}<br>
         <ol class="grid grid-8col">
           <i class="grid alterhealth clickable" data-change="-1">-1, Regular Hit</i>
           <i class="grid alterhealth clickable" data-change="-2">-2, AP Hit</i>
@@ -488,7 +500,7 @@
 
       <div class="cprgraphics">
         <h3>{{localize "CPRED.armorshield"}} ({{data.combatstats.armorsetup.armorshield.remain}} / {{data.combatstats.armorsetup.armorshield.value}})</h3>
-        {{{buildDamageTrack data.combatstats.armorsetup.armorshield.remain data.combatstats.armorsetup.armorshield.value}}}<br>
+        {{{buildShieldArmorTrack data.combatstats.armorsetup.armorshield.remain data.combatstats.armorsetup.armorshield.value}}}<br>
         <ol class="grid grid-8col">
           <i class="grid alterhealth clickable" data-change="-10">-10</i>
           <i class="grid alterhealth clickable" data-change="-5">-5</i>
@@ -500,19 +512,6 @@
         </ol>
       </div>
       {{!-- armor POOL END --}}
-
-
-
-
-        {{!-- LUCK POOL START --}}
-        <div class="cprgraphics">
-          <h3>{{localize "CPRED.luckpool"}} ({{data.combatstats.luckpool.value}} / {{data.combatstats.luckpool.max}})</h3>
-          {{{buildLuckTrack data.combatstats.luckpool.value data.combatstats.luckpool.max}}}<br>
-          <ol class="grid grid-4col">
-            <i class="grid alterluck clickable" data-change="-1">{{localize "CPRED.spend"}}</i> <i class="grid alterluck clickable" data-change="+1">{{localize "CPRED.earn"}}</i> <i class="grid alterluck clickable" data-change="-9999">{{localize "CPRED.zero"}}</i> <i class="grid alterluck clickable" data-change="+9999">{{localize "CPRED.full"}}</i>
-          </ol>
-        </div>
-        {{!-- LUCK POOL END --}}
 
         {{!-- ROLL MODIFIERS START --}}
         {{!-- TODO: To make internal tabs need to override the _onChangeTab(event, tabs, active) method in your sheet class. Check out module/actor/sheet/base.js in the starfinder system. --}}

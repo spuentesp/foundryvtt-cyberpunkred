@@ -164,6 +164,64 @@ Hooks.once('init', async function () {
     return outStr;
   });
 
+  //Setup helper for luck track
+  Handlebars.registerHelper('buildHeadArmorTrack', function (current, max) {
+    var x = 1;
+    var outStr = " ";
+    for (x = 1; x <= max; x++) {
+      if (x <= current) {
+        outStr += "<i data-setvalue=\"" + x + "\" class=\"clickable fas fa-shield-alt setcurrentheadarmor \"></i>";
+      } else {
+        outStr += "<i data-setvalue=\"" + x + "\" class=\"clickable far fa-shield-alt setcurrentheadarmor \"></i>";
+      }
+      if (x % 5 == 0) {
+        outStr += " ";
+      }
+      if (x % 10 == 0 && x != max) {
+        outStr += "<br>";
+      }
+    }
+    return outStr;
+  });
+
+  Handlebars.registerHelper('buildBodyArmorTrack', function (current, max) {
+    var x = 1;
+    var outStr = " ";
+    for (x = 1; x <= max; x++) {
+      if (x <= current) {
+        outStr += "<i data-setvalue=\"" + x + "\" class=\"clickable fas fa-shield-alt setcurrentbodyarmor \"></i>";
+      } else {
+        outStr += "<i data-setvalue=\"" + x + "\" class=\"clickable far fa-shield-alt setcurrentbosyarmor \"></i>";
+      }
+      if (x % 5 == 0) {
+        outStr += " ";
+      }
+      if (x % 10 == 0 && x != max) {
+        outStr += "<br>";
+      }
+    }
+    return outStr;
+  });
+
+  Handlebars.registerHelper('buildShieldArmorTrack', function (current, max) {
+    var x = 1;
+    var outStr = " ";
+    for (x = 1; x <= max; x++) {
+      if (x <= current) {
+        outStr += "<i data-setvalue=\"" + x + "\" class=\"clickable fas fa-shield-alt setcurrentshieldarmor\"></i>";
+      } else {
+        outStr += "<i data-setvalue=\"" + x + "\" class=\"clickable far fa-shield-alt setcurrentshieldarmor \"></i>";
+      }
+      if (x % 5 == 0) {
+        outStr += " ";
+      }
+      if (x % 10 == 0 && x != max) {
+        outStr += "<br>";
+      }
+    }
+    return outStr;
+  });
+
   Handlebars.registerHelper('cprTags', function (tagsInput) {
     let output = '<div class="tags">';
     tagsInput.forEach(element => {

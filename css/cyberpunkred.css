@@ -11,6 +11,15 @@
   --cpr-default-small-text-size: .80em;
 }
 
+.my-augfiguration {
+  --aug-tr: 25px;
+  --aug-bl: 57px;
+  --aug-br: 25px;
+  --aug-br-inset2: 40%;
+  --aug-border-all: 10px;
+  --aug-border-bg: linear-gradient(#400000, #600000);
+}
+
 
 /* Roll Template */
 
@@ -127,13 +136,6 @@ span.part-formula {
 
 /* Add graphical border around this block */
 .cyberpunkred .cprgraphics, #chat-log .message {
-  border: 10px ridge #FF1010;
-	border-image-source: url("crredborder.jpg?ver1"); /* source url */
-	border-image-source: url("crredborder.jpg?ver1"); /* source url */
-	border-image-slice: 17 0 17 9;
-	border-image-width: 17px 0px 17px 9px;
-	border-image-outset: 0px;
-	border-image-repeat: stretch;
   background: var(--cpr-app-bak-color);
   color: var(--cpr-red-color);
   padding-top: 5px !important;

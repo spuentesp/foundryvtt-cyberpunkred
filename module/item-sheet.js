@@ -19,7 +19,7 @@ export class cyberpunkredItemSheet extends ItemSheet {
 
   /** @override */
   get template() {
-    const path = "systems/cyberpunkred/templates/item";
+    const path = "systems/CPRED-V2/templates/item";
     // Return a single sheet for all item types.
      return `${path}/item-sheet.html`;
 

@@ -27,6 +27,12 @@
   color: var(--cpr-red-color) !important;
 }
 
+button {
+  border: 2px solid var(--cpr-red-color) !important;
+  background-color: var(--cpr-red-dark-red) !important;
+  color: var(--cpr-red-color) !important;
+}
+
 input[type="text"],
 input[type="number"],
 input[type="password"],

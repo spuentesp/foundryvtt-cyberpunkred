@@ -31,7 +31,7 @@ export class cyberpunkredActorSheet extends ActorSheet {
 
   /** @override */
   get template() {
-    const path = "systems/cyberpunkred/templates/actor";
+    const path = "systems/CPRED-V2/templates/actor";
     // Unique actor sheet by type, like `character-sheet.html`.
     return `${path}/actor-${this.actor.data.type}-sheet.html`;
   }

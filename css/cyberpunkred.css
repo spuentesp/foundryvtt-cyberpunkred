@@ -6,7 +6,7 @@
   --cpr-red-color: #fcec0c; /* var(--cpr-red-color) */
   --cpr-light-bak-color: #444444; /* var(--cpr-light-bak-color) */
   --cpr-app-bak-color: black; /* var(--cpr-app-bak-color) */
-  --cpr-green-color: #37a51b; /* var(--cpr-green-color) */
+  --cpr-green-color: #1b560d; /* var(--cpr-green-color) */
   --cpr-default-text-size: .90em;
   --cpr-default-small-text-size: .80em;
 }
@@ -18,6 +18,10 @@
   --aug-br-inset2: 40%;
   --aug-border-all: 10px;
   --aug-border-bg: linear-gradient(#400000, #600000);
+}
+
+.window-app .window-content {
+  background: none !important;
 }
 
 
@@ -595,7 +599,7 @@ span.part-formula {
 }
 
 .cyberpunkred input.settings[type=checkbox]:checked + label {
-  background-color: #90FF90;
+  background-color: #0b400b;
 	font-weight: bold;
   border: 1px solid var(--cpr-red-color);
   border-color: var(--cpr-red-color);

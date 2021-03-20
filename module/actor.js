@@ -386,9 +386,19 @@ export class cyberpunkredActor extends Actor {
 
     //Calculate armor
 
-    data.armorsetup.armorhead.remain = Number(data.armorsetup.armorhead.value) - Number(data.armorsetup.armorhead.degrade);
-    data.armorsetup.armorbody.remain = Number(data.armorsetup.armorbody.value) - Number(data.armorsetup.armorbody.degrade);
-    data.armorsetup.armorshield.remain = Number(data.armorsetup.armorshield.value) - Number(data.armorsetup.armorshield.degrade);
+    if(!data.armorsetup.armorhead.value) {
+      data.armorsetup.armorhead.value = 0; data.armorsetup.armorhead.remain = 0
+    };
+    if(!data.armorsetup.armorbody.value) {
+      data.armorsetup.armorbody.value = 0; data.armorsetup.armorbody.remain = 0
+    };
+    if(!data.armorsetup.armorshield.value) {
+      data.armorsetup.armorshield.value = 0; data.armorsetup.armorshield.remain = 0
+    };
+
+    data.armorsetup.armorhead.degrade = Number(data.armorsetup.armorhead.value) - data.armorsetup.armorhead.remain
+    data.armorsetup.armorbody.degrade = Number(data.armorsetup.armorhead.value) - data.armorsetup.armorhead.remain
+    data.armorsetup.armorshield.degrade = Number(data.armorsetup.armorhead.value) - data.armorsetup.armorhead.remain
 
     //####################
     //

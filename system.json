@@ -42,7 +42,7 @@
   "primaryTokenAttribute": "combatstats.healthpool",
   "secondaryTokenAttribute": "combatstats.luckpool",
   "url": "https://raw.githubusercontent.com/spuentesp/foundryvtt-cyberpunkred/ui_and_data_update/README.md",
-  "manifest": "https://raw.githubusercontent.com/spuentesp/foundryvtt-cyberpunkred/ui_and_data_update/system.json",
+  "manifest": "https://raw.githubusercontent.com/spuentesp/foundryvtt-cyberpunkred/stable_release/system.json",
   "download": "https://github.com/spuentesp/foundryvtt-cyberpunkred/archive/stable_release.zip",
   "license": "Copyright 2020 @gerdofal#0763 - License Terms GNU GPL v3 see file license.md"
 }

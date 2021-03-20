@@ -212,6 +212,54 @@ export class cyberpunkredActorSheet extends ActorSheet {
       });
     });
 
+    html.find('.alterheadarmor').click(ev => {
+      const actor = this.actor;
+      var setTo = $(ev.currentTarget).attr("data-change") * 1;
+      var max = actor.data.data.armorsetup.armorhead.value
+      var newArmor = actor.data.data.armorsetup.armorhead.remain + setTo;
+      if (newArmor > max) {
+        newArmor = max;
+      }
+      if (newArmor < 0) {
+        newArmor = 0;
+      }
+      actor.update({
+        "data.armorsetup.armorhead.remain": newArmor
+      });
+    });
+
+    html.find('.alterbodyarmor').click(ev => {
+      const actor = this.actor;
+      var setTo = $(ev.currentTarget).attr("data-change") * 1;
+      var max = actor.data.data.armorsetup.armorbody.value
+      var newArmor = actor.data.data.armorsetup.armorbody.remain + setTo;
+      if (newArmor > max) {
+        newArmor = max;
+      }
+      if (newArmor < 0) {
+        newArmor = 0;
+      }
+      actor.update({
+        "data.armorsetup.armorbody.remain": newArmor
+      });
+    });
+
+    html.find('.altershieldarmor').click(ev => {
+      const actor = this.actor;
+      var setTo = $(ev.currentTarget).attr("data-change") * 1;
+      var max = actor.data.data.armorsetup.armorshield.value
+      var newArmor = actor.data.data.armorsetup.armorshield.remain + setTo;
+      if (newArmor > max) {
+        newArmor = max;
+      }
+      if (newArmor < 0) {
+        newArmor = 0;
+      }
+      actor.update({
+        "data.armorsetup.armorshield.remain": newArmor
+      });
+    });
+
     //Set current luck based on click on modifier number
     html.find('.alterluck').click(ev => {
       const actor = this.actor;

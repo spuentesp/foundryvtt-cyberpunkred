@@ -479,11 +479,11 @@
         <h3>{{localize "CPRED.armorhead"}} ({{localize "CPRED.reduction"}} : {{data.combatstats.armorhead.remain}})</h3>
         {{{buildHeadArmorTrack data.combatstats.armorsetup.armorhead.remain data.combatstats.armorsetup.armorhead.value}}}<br>
         <ol class="grid grid-8col">
-          <i class="grid alterhealth clickable" data-change="-1">-1, Regular Hit</i>
-          <i class="grid alterhealth clickable" data-change="-2">-2, AP Hit</i>
-          <i class="grid alterhealth clickable" data-change="+1">+1</i>
-          <i class="grid alterhealth clickable" data-change="-9999">{{localize "CPRED.zero"}}</i>
-          <i class="grid alterhealth clickable" data-change="+9999">{{localize "CPRED.full"}}</i>
+          <i class="grid alterheadarmor clickable" data-change="-1">-1, Regular Hit</i>
+          <i class="grid alterheadarmor clickable" data-change="-2">-2, AP Hit</i>
+          <i class="grid alterheadarmor clickable" data-change="+1">+1</i>
+          <i class="grid alterheadarmor clickable" data-change="-9999">{{localize "CPRED.zero"}}</i>
+          <i class="grid alterheadarmor clickable" data-change="+9999">{{localize "CPRED.full"}}</i>
         </ol>
       </div>
 
@@ -491,10 +491,10 @@
         <h3>{{localize "CPRED.armorbody"}} ({{localize "CPRED.reduction"}} : {{data.combatstats.armorsetup.armorbody.remain}})</h3>
         {{{buildBodyArmorTrack data.combatstats.armorsetup.armorbody.remain data.combatstats.armorsetup.armorbody.value}}}<br>
         <ol class="grid grid-8col">
-          <i class="grid alterhealth clickable" data-change="-1">-1, Regular Hit</i>
-          <i class="grid alterhealth clickable" data-change="-2">-2, AP Hit</i>
-          <i class="grid alterhealth clickable" data-change="-9999">{{localize "CPRED.zero"}}</i>
-          <i class="grid alterhealth clickable" data-change="+9999">{{localize "CPRED.full"}}</i>
+          <i class="grid alterbodyarmor clickable" data-change="-1">-1, Regular Hit</i>
+          <i class="grid alterbodyarmor clickable" data-change="-2">-2, AP Hit</i>
+          <i class="grid alterbodyarmor clickable" data-change="-9999">{{localize "CPRED.zero"}}</i>
+          <i class="grid alterbodyarmor clickable" data-change="+9999">{{localize "CPRED.full"}}</i>
         </ol>
       </div>
 
@@ -502,13 +502,13 @@
         <h3>{{localize "CPRED.armorshield"}} ({{data.combatstats.armorsetup.armorshield.remain}} / {{data.combatstats.armorsetup.armorshield.value}})</h3>
         {{{buildShieldArmorTrack data.combatstats.armorsetup.armorshield.remain data.combatstats.armorsetup.armorshield.value}}}<br>
         <ol class="grid grid-8col">
-          <i class="grid alterhealth clickable" data-change="-10">-10</i>
-          <i class="grid alterhealth clickable" data-change="-5">-5</i>
-          <i class="grid alterhealth clickable" data-change="-1">-1</i>
-          <i class="grid alterhealth clickable" data-change="+10">+10</i>
-          <i class="grid alterhealth clickable" data-change="+5">+5</i>
-          <i class="grid alterhealth clickable" data-change="+1">+1</i>
-          <i class="grid alterhealth clickable" data-change="-9999">{{localize "CPRED.zero"}}</i> <i class="grid alterhealth clickable" data-change="+9999">{{localize "CPRED.full"}}</i>
+          <i class="grid altershieldarmor clickable" data-change="-10">-10</i>
+          <i class="grid altershieldarmor clickable" data-change="-5">-5</i>
+          <i class="grid altershieldarmor clickable" data-change="-1">-1</i>
+          <i class="grid altershieldarmor clickable" data-change="+10">+10</i>
+          <i class="grid altershieldarmor clickable" data-change="+5">+5</i>
+          <i class="grid altershieldarmor clickable" data-change="+1">+1</i>
+          <i class="grid altershieldarmor clickable" data-change="-9999">{{localize "CPRED.zero"}}</i> <i class="grid alterhealth clickable" data-change="+9999">{{localize "CPRED.full"}}</i>
         </ol>
       </div>
       {{!-- armor POOL END --}}

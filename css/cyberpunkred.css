@@ -4,6 +4,7 @@
 
 :root {
   --cpr-red-color: #fcec0c; /* var(--cpr-red-color) */
+  --cpr-red-dark-red: #400000; /* var(--cpr-red-color) */
   --cpr-light-bak-color: #444444; /* var(--cpr-light-bak-color) */
   --cpr-app-bak-color: black; /* var(--cpr-app-bak-color) */
   --cpr-green-color: #1b560d; /* var(--cpr-green-color) */
@@ -43,6 +44,10 @@ input[type="time"]:focus{
 }
 
 form .form-group label {
+  color: var(--cpr-red-color) !important;
+}
+
+.window-app .window-content {
   color: var(--cpr-red-color) !important;
 }
 
@@ -436,10 +441,9 @@ span.part-formula {
 }
 
 .cyberpunkred .humanityButton {
-  background-color: #FF9799;
+  background-color: var(--cpr-red-dark-red);
   color: black;
 }
-
 
 
 /* Attributes and Skills Tab */
@@ -692,7 +696,7 @@ span.part-formula {
 }
 
 .cyberpunkred input.modlist[type=checkbox]:checked + label {
-  background-color: #FF9090;
+  background-color: var(--cpr-red-dark-red);;
 	font-weight: bold;
   border: 1px solid var(--cpr-red-color);
   border-color: var(--cpr-red-color);
@@ -710,7 +714,7 @@ span.part-formula {
 }
 
 .cyberpunkred input:read-only {
-  background-color: #DCA9AA;
+  background-color: var(--cpr-red-dark-red);;
 }
 
 /* Grid Setups */
@@ -788,7 +792,7 @@ span.part-formula {
 .cyberpunkred .npc-button-array button {
   border: 0px solid green; /* Green border */
   color: white;
-  background-color: #702020;
+  background-color: var(--cpr-red-dark-red);;
   cursor: pointer; /* Pointer/hand icon */
   float: left; /* Float the buttons side by side */
   box-sizing: border-box;

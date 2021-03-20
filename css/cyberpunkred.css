@@ -24,6 +24,7 @@
 /* overrides */
 .window-app .window-content {
   background: none !important;
+  color: var(--cpr-red-color) !important;
 }
 
 input[type="text"],

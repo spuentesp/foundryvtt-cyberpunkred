@@ -3,13 +3,14 @@
 /* Primary Color Variables: */
 
 :root {
-  --cpr-red-color: #700000; /* var(--cpr-red-color) */
-  --cpr-light-bak-color: #FFFFFF; /* var(--cpr-light-bak-color) */
-  --cpr-app-bak-color: rgba(200,200,200,1.00); /* var(--cpr-app-bak-color) */
-  --cpr-green-color: #18520b; /* var(--cpr-green-color) */
+  --cpr-red-color: #fcec0c; /* var(--cpr-red-color) */
+  --cpr-light-bak-color: #444444; /* var(--cpr-light-bak-color) */
+  --cpr-app-bak-color: black; /* var(--cpr-app-bak-color) */
+  --cpr-green-color: #37a51b; /* var(--cpr-green-color) */
   --cpr-default-text-size: .90em;
   --cpr-default-small-text-size: .80em;
 }
+
 
 /* Roll Template */
 
@@ -133,7 +134,7 @@ span.part-formula {
 	border-image-width: 17px 0px 17px 9px;
 	border-image-outset: 0px;
 	border-image-repeat: stretch;
-  background: white;
+  background: var(--cpr-app-bak-color);
   color: var(--cpr-red-color);
   padding-top: 5px !important;
   padding-bottom: 3px !important; 
@@ -260,7 +261,7 @@ span.part-formula {
   grid-column: 1 / span 2;
   grid-row: 1;
   border: none;
-  border-bottom: 1px solid #AAA;
+  border-bottom: 1px solid #222;
   padding: 3px;
 }
 .cyberpunkred .cpr-nav {
@@ -271,7 +272,7 @@ span.part-formula {
   grid-template-columns: auto;
   grid-template-rows: auto;
   align-content: start;
-  border-right: 1px solid #AAA;
+  border-right: 1px solid #222;
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 0px 0px;
 }
@@ -318,7 +319,7 @@ span.part-formula {
   padding: 5px 5px 5px 5px;
   margin: 0px;
   height: 25px;
-  background: linear-gradient(#D0D0D0,#E0E0E0);
+  background: linear-gradient(#000000,#202020);
   border-left: 1px solid var(--cpr-red-color);
   border-top: 1px solid var(--cpr-red-color);
   border-bottom: 1px solid var(--cpr-red-color);

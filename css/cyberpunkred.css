@@ -314,7 +314,7 @@ span.part-formula {
   align-content: start;
   border-right: 1px solid #222;
   padding: 0px 0px 0px 0px;
-  margin: 0px 0px 0px 0px;
+  margin: 30px 0px 0px 0px;
 }
 .cyberpunkred .cpr-content {
   grid-column: 2;
@@ -344,11 +344,7 @@ span.part-formula {
   padding: 5px 5px 5px 5px;
   margin: 0px;
   height: 25px;
-  background: var(--cpr-light-bak-color);
-  border-left: 1px solid var(--cpr-red-color);
-  border-top: 1px solid var(--cpr-red-color);
-  border-bottom: 1px solid var(--cpr-red-color);
-  border-radius: 10px 0px 0px 0px;
+  background: var(--cpr-red-dark-red);
   font-size: var(--cpr-default-text-size);
   white-space: nowrap;
 }

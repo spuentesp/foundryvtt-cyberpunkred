@@ -20,8 +20,30 @@
   --aug-border-bg: linear-gradient(#400000, #600000);
 }
 
+/* overrides */
 .window-app .window-content {
   background: none !important;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="date"],
+input[type="time"] {
+  border: 2px solid #7a7971 !important;
+  color: var(--cpr-red-color) !important;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus{
+  color: white;
+}
+
+form .form-group label {
+  color: var(--cpr-red-color) !important;
 }
 
 
@@ -78,13 +100,13 @@ span.part-formula {
 
 /* Rolls */
 .dice-roll .dice-formula {
-  background: #FFFFFF;
+  background: #000000;
   display: block;
   padding-left: 10px;
   padding-right: 10px;
 }
 .dice-roll .dice-total {
-  background: #FFAAAA;
+  background: #4c1414;
   display: inline-block;
   font-weight: normal;
   padding: 0px 10px 0px 10px;
@@ -103,7 +125,7 @@ span.part-formula {
   top: -23px;
 }
 .dice-roll .dice-tooltip {
-  background: #FFEEEE;
+  background: #110000;
   padding-left: 10px;
   padding-right: 10px;
   display: inline-block;
@@ -417,6 +439,8 @@ span.part-formula {
   background-color: #FF9799;
   color: black;
 }
+
+
 
 /* Attributes and Skills Tab */
 .cyberpunkred .width50 {

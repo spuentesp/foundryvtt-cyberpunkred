@@ -18,7 +18,7 @@ export class cyberpunkredActorSheet extends ActorSheet {
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       classes: ["cyberpunkred", "sheet", "actor"],
-      template: "systems/cyberpunkred/templates/actor/actor-sheet.html",
+      template: "systems/CPRED-V2/templates/actor/actor-sheet.html",
       width: 600,
       height: 600,
       tabs: [{

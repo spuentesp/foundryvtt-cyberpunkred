@@ -11,7 +11,7 @@
 {{/unless}}
   
   {{#if data.backend.dataprepcomplete}}
-  
+
   {{!-- Main Grid --}}
 <div class="cpr-grid cprgraphics" data-augmented-ui="border"> {{!-- Header --}}
   <div class="cpr-header cprgraphics">
@@ -486,7 +486,7 @@
         </ol>
       </div>
 
-      {{#if data.backend.jsk}}
+      {{#data.combatstats.armorsetup.armorshield.value > 0}}
       <div class="cprgraphics">
         <h3>{{localize "CPRED.armorshield"}} ({{data.combatstats.armorsetup.armorshield.remain}} / {{data.combatstats.armorsetup.armorshield.value}})</h3>
         {{{buildDamageTrack data.combatstats.armorsetup.armorshield.remain data.combatstats.armorsetup.armorshield.value}}}<br>
@@ -500,6 +500,7 @@
           <i class="grid alterhealth clickable" data-change="-9999">{{localize "CPRED.zero"}}</i> <i class="grid alterhealth clickable" data-change="+9999">{{localize "CPRED.full"}}</i>
         </ol>
       </div>
+      <{{/if}}
       {{!-- armor POOL END --}}
 
 

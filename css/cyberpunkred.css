@@ -4,7 +4,7 @@
 
 :root {
   --cpr-red-color: #fcec0c; /* var(--cpr-red-color) */
-  --cpr-red-bright-red: #8c0303; /* var(--cpr-red-color) */
+  --cpr-red-bright-red: #bf0505; /* var(--cpr-red-color) */
   --cpr-red-dark-red: #400000; /* var(--cpr-red-color) */
   --cpr-light-bak-color: #444444; /* var(--cpr-light-bak-color) */
   --cpr-app-bak-color: black; /* var(--cpr-app-bak-color) */
@@ -360,7 +360,7 @@ span.part-formula {
   padding: 5px 5px 5px 20px;
   margin: 0px;
   height: 30px;
-  background: linear-gradient(#000000,var(--cpr-red-bright-red));
+  background: linear-gradient(var(--cpr-red-bright-red),var(--cpr-red-bright-red));
   font-size: var(--cpr-default-text-size);
 }
 

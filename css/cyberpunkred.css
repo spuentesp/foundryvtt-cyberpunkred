@@ -4,6 +4,7 @@
 
 :root {
   --cpr-red-color: #fcec0c; /* var(--cpr-red-color) */
+  --cpr-red-bright-red: #8c0303; /* var(--cpr-red-color) */
   --cpr-red-dark-red: #400000; /* var(--cpr-red-color) */
   --cpr-light-bak-color: #444444; /* var(--cpr-light-bak-color) */
   --cpr-app-bak-color: black; /* var(--cpr-app-bak-color) */
@@ -73,6 +74,11 @@ span.part-formula {
 .cpr-roll-title {
   font-size: 1.5em;
   border-bottom: 2px solid var(--cpr-red-color);
+}
+
+.cpr-roll-brightred {
+  font-size: 1.5em;
+  color: var(--cpr-red-bright-red);
 }
 
 
@@ -176,7 +182,7 @@ span.part-formula {
 .cyberpunkred .cprgraphics, #chat-log .message {
   background: var(--cpr-app-bak-color);
   color: var(--cpr-red-color);
-  padding-top: 5px !important;
+  padding-top: 12px !important;
   padding-bottom: 3px !important; 
   box-sizing: border-box;
   image-rendering: crisp-edges;
@@ -292,9 +298,10 @@ span.part-formula {
 /* Main grid with header, left nav, and right content */
 .cyberpunkred .cpr-grid {
   display: grid;
-  grid-template-columns: 90px auto;
-  grid-template-rows: 40px auto;;
+  grid-template-columns: 115px auto;
+  grid-template-rows: 40px auto;
   padding: 3px;
+  padding-right:-3px;
 }
 .cyberpunkred .cpr-header {
   grid-column: 1 / span 2;
@@ -348,13 +355,12 @@ span.part-formula {
   white-space: nowrap;
 }
 .cyberpunkred .cpr-nav .cpr-nav-item .item.active {
-  text-decoration: underline;
   text-shadow: none;
   font-weight: bold;
   padding: 5px 5px 5px 20px;
   margin: 0px;
   height: 30px;
-  background: linear-gradient(#000000,var(--cpr-red-dark-red));
+  background: linear-gradient(#000000,var(--cpr-red-bright-red));
   font-size: var(--cpr-default-text-size);
 }
 

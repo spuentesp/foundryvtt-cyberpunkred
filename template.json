@@ -73,84 +73,22 @@
       },
 
       "combatsetup": {
-        "weaponsetup": {
-          "weapon1": {
-            "name": "Weapon Name...",
-            "damage": "5d6",
-            "skill": "hidden",
-            "type": "Pistol"
-          },
-          "weapon2": {
-            "name": "Weapon Name...",
-            "damage": "5d6",
-            "skill": "hidden",
-            "type": "Pistol"
-          },
-          "weapon3": {
-            "name": "Weapon Name...",
-            "damage": "5d6",
-            "skill": "hidden",
-            "type": "Pistol"
-          },
-          "weapon4": {
-            "name": "Weapon Name...",
-            "damage": "5d6",
-            "skill": "hidden",
-            "type": "Pistol"
-          },
-          "weapon5": {
-            "name": "Weapon Name...",
-            "damage": "5d6",
-            "skill": "hidden",
-            "type": "Pistol"
-          },
-          "weapon6": {
-            "name": "Weapon Name...",
-            "damage": "5d6",
-            "skill": "hidden",
-            "type": "Pistol"
-          },
-          "weapon7": {
-            "name": "Weapon Name...",
-            "damage": "5d6",
-            "skill": "hidden",
-            "type": "Pistol"
-          },
-          "weapon8": {
-            "name": "Weapon Name...",
-            "damage": "5d6",
-            "skill": "hidden",
-            "type": "Pistol"
-          },
-          "weapon9": {
-            "name": "Weapon Name...",
-            "damage": "5d6",
-            "skill": "hidden",
-            "type": "Pistol"
-          },
-          "weapon10": {
-            "name": "Weapon Name...",
-            "damage": "5d6",
-            "skill": "hidden",
-            "type": "Pistol"
-          }
-        },
 
         "armorsetup": {
           "armorhead": {
-            "name": "Armor Type...",
+            "name": "None",
             "value": 0,
             "degrade": 0,
             "remain": 0
           },
           "armorbody": {
-            "name": "Armor Type...",
+            "name": "None",
             "value": 0,
             "degrade": 0,
             "remain": 0
           },
           "armorshield": {
-            "name": "Armor Type...",
+            "name": "None",
             "value": 0,
             "degrade": 0,
             "remain": 0
@@ -239,409 +177,477 @@
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "basictech": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "brawling": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "bribery": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "concentration": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "conversation": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "cybertech": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "driving": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "education": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "evasion": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "firstaid": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "humanperception": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "interrogation": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "localexpert": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "marksmanship": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "meleeweapon": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "perception": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "persuasion": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "playinstrument": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "stealth": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "tracking": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "accounting": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "acting": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "airvehicletech": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "animalhandling": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "archery": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "autofire": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": true
           },
           "bureaucracy": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "business": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "composition": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "concealorrevealobject": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "contortionist": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "criminology": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "cryptography": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "dance": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "deduction": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "demolitions": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": true
           },
           "drivelandvehicle": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "electronicsandsecuritytech": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "endurance": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "forgery": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "gamble": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "handgun": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "heavyweapons": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": true
           },
           "landvehicletech": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "language": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "librarysearch": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "lipreading": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "martialarts": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": true
           },
           "paintordraworsculpt": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "paramedic": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": true
           },
           "personalgrooming": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "photographyandfilm": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "picklock": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "pickpocket": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "pilotairvehicle": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": true
           },
           "pilotseavehicle": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "resisttortureordrugs": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "riding": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "science": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "seavehicletech": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "shoulderarms": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "streetwise": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "tactics": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "trading": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "wardrobeandstyle": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "weaponstech": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           },
           "wildernesssurvival": {
             "value": 0,
             "mod": 0,
             "itemmod": 0,
-            "roll": 0
+            "roll": 0,
+            "isDifficult": false
           }
 
 

@@ -383,7 +383,7 @@
         {{#each ../data.skills as |skill key|}}
         {{#if skill.show}}
         {{#if_eq skill.category thiscategory}}
-        <label for="data.skills.{{key}}.value" data-label="{{localize (concat 'CPRED.' key)}}" data-roll="{{rollSkill key}}" class="rollable">{{localize (concat "CPRED." key)}} ({{localize (concat "CPRED." skill.linkedattribute)}})</label>
+        <label for="data.skills.{{key}}.value" data-label="{{localize (concat 'CPRED.' key)}}" data-roll="{{rollSkill key}}" class="rollable">{{#if skill.isDifficult}}<b>x2</b>{{/if}}{{localize (concat "CPRED." key)}} ({{localize (concat "CPRED." skill.linkedattribute)}})</label>
         <input class="skill-value" type="number" name="data.skills.{{key}}.value" value="{{skill.value}}" data-dtype="Number"/>
         <input type="number" name="data.skills.{{key}}.mod" value="{{skill.mod}}" data-dtype="Number"/>
         <input type="number" name="data.skills.{{key}}.itemmod" value="{{skill.itemmod}}" data-dtype="Number" readonly/>
@@ -477,7 +477,7 @@
       {{!-- ARMOR POOL START --}}
       <div class="cprgraphics">
         <h3>{{localize "CPRED.armorhead"}} ({{localize "CPRED.reduction"}} : {{data.combatstats.armorhead.remain}})</h3>
-        {{{buildHeadArmorTrack data.combatstats.armorsetup.armorhead.remain data.combatstats.armorsetup.armorhead.value}}}<br>
+        {{{buildHeadArmorTrack data.combatsetup.armorsetup.armorhead.remain data.combatsetup.armorsetuparmorhead.value}}}<br>
         <ol class="grid grid-8col">
           <i class="grid alterheadarmor clickable" data-change="-1">-1, Regular Hit</i>
           <i class="grid alterheadarmor clickable" data-change="-2">-2, AP Hit</i>
@@ -488,8 +488,8 @@
       </div>
 
       <div class="cprgraphics">
-        <h3>{{localize "CPRED.armorbody"}} ({{localize "CPRED.reduction"}} : {{data.combatstats.armorsetup.armorbody.remain}})</h3>
-        {{{buildBodyArmorTrack data.combatstats.armorsetup.armorbody.remain data.combatstats.armorsetup.armorbody.value}}}<br>
+        <h3>{{localize "CPRED.armorbody"}} ({{localize "CPRED.reduction"}} : {{data.combatsetup.armorsetuparmorbody.remain}})</h3>
+        {{{buildBodyArmorTrack data.combatsetup.armorsetup.armorbody.remain data.combatsetup.armorsetuparmorbody.value}}}<br>
         <ol class="grid grid-8col">
           <i class="grid alterbodyarmor clickable" data-change="-1">-1, Regular Hit</i>
           <i class="grid alterbodyarmor clickable" data-change="-2">-2, AP Hit</i>
@@ -499,8 +499,8 @@
       </div>
 
       <div class="cprgraphics">
-        <h3>{{localize "CPRED.armorshield"}} ({{data.combatstats.armorsetup.armorshield.remain}} / {{data.combatstats.armorsetup.armorshield.value}})</h3>
-        {{{buildShieldArmorTrack data.combatstats.armorsetup.armorshield.remain data.combatstats.armorsetup.armorshield.value}}}<br>
+        <h3>{{localize "CPRED.armorshield"}} ({{data.combatsetup.armorsetuparmorshield.remain}} / {{data.combatsetup.armorsetuparmorshield.value}})</h3>
+        {{{buildShieldArmorTrack data.combatsetup.armorsetuparmorshield.remain data.combatsetup.armorsetuparmorshield.value}}}<br>
         <ol class="grid grid-8col">
           <i class="grid altershieldarmor clickable" data-change="-10">-10</i>
           <i class="grid altershieldarmor clickable" data-change="-5">-5</i>

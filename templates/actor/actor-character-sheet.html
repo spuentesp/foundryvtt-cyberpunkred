@@ -383,7 +383,7 @@
         {{#each ../data.skills as |skill key|}}
         {{#if skill.show}}
         {{#if_eq skill.category thiscategory}}
-        <label for="data.skills.{{key}}.value" data-label="{{localize (concat 'CPRED.' key)}}" data-roll="{{rollSkill key}}" class="rollable">{{#if skill.isDifficult}}<b>x2</b>{{/if}}{{localize (concat "CPRED." key)}} ({{localize (concat "CPRED." skill.linkedattribute)}})</label>
+        <label for="data.skills.{{key}}.value" data-label="{{localize (concat 'CPRED.' key)}}" data-roll="{{rollSkill key}}" class="rollable">{{localize (concat "CPRED." key)}} ({{localize (concat "CPRED." skill.linkedattribute)}}) {{#if skill.isDifficult}}<b> (x2) </b>{{/if}}</label>
         <input class="skill-value" type="number" name="data.skills.{{key}}.value" value="{{skill.value}}" data-dtype="Number"/>
         <input type="number" name="data.skills.{{key}}.mod" value="{{skill.mod}}" data-dtype="Number"/>
         <input type="number" name="data.skills.{{key}}.itemmod" value="{{skill.itemmod}}" data-dtype="Number" readonly/>

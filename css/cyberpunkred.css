@@ -199,7 +199,6 @@ span.part-formula {
 
 #sidebar-tabs > .item.active, #sidebar-tabs > .item, #players {
   color: var(--cpr-red-color);
-  border: 1px solid var(--cpr-red-color);
   background: var(--cpr-app-bak-color);
 }
 
@@ -329,7 +328,7 @@ span.part-formula {
 .cyberpunkred .cpr-nav .cpr-nav-item {
   justify-self: start;
   display: block;
-  height: 25px;
+  height: 30px;
   width: 100%;
   padding: 0px;
   margin: 0px;
@@ -341,9 +340,9 @@ span.part-formula {
   font-weight: normal;
   display: block;
   width: 100%;
-  padding: 5px 5px 5px 5px;
+  padding: 5px 5px 5px 20px;
   margin: 0px;
-  height: 25px;
+  height: 30px;
   background: var(--cpr-red-dark-red);
   font-size: var(--cpr-default-text-size);
   white-space: nowrap;
@@ -352,14 +351,10 @@ span.part-formula {
   text-decoration: underline;
   text-shadow: none;
   font-weight: bold;
-  padding: 5px 5px 5px 5px;
+  padding: 5px 5px 5px 20px;
   margin: 0px;
-  height: 25px;
-  background: linear-gradient(#000000,#202020);
-  border-left: 1px solid var(--cpr-red-color);
-  border-top: 1px solid var(--cpr-red-color);
-  border-bottom: 1px solid var(--cpr-red-color);
-  border-radius: 10px 0px 0px 0px;
+  height: 30px;
+  background: linear-gradient(#000000,var(--cpr-red-dark-red));
   font-size: var(--cpr-default-text-size);
 }
 

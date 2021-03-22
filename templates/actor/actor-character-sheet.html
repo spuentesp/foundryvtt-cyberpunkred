@@ -383,7 +383,7 @@
         {{#each ../data.skills as |skill key|}}
         {{#if skill.show}}
         {{#if_eq skill.category thiscategory}}
-        <label for="data.skills.{{key}}.value" data-label="{{localize (concat 'CPRED.' key)}}" data-roll="{{rollSkill key}}" class="rollable">{{localize (concat "CPRED." key)}} ({{localize (concat "CPRED." skill.linkedattribute)}}) {{#if skill.isDifficult}}<b> (x2) </b>{{/if}}</label>
+        <label for="data.skills.{{key}}.value" data-label="{{localize (concat 'CPRED.' key)}}" data-roll="{{rollSkill key}}" class="rollable">{{localize (concat "CPRED." key)}} ({{localize (concat "CPRED." skill.linkedattribute)}}) {{#if skill.isDifficult}}<b class="cpr-roll-brightred"> (x2) </b>{{/if}}</label>
         <input class="skill-value" type="number" name="data.skills.{{key}}.value" value="{{skill.value}}" data-dtype="Number"/>
         <input type="number" name="data.skills.{{key}}.mod" value="{{skill.mod}}" data-dtype="Number"/>
         <input type="number" name="data.skills.{{key}}.itemmod" value="{{skill.itemmod}}" data-dtype="Number" readonly/>
@@ -398,8 +398,8 @@
       <li class="flexrow">
         <div>{{localize "CPRED.name"}}</div>
         <div>{{localize "CPRED.value"}}</div>
-        <div>{{localize "CPRED.degrade"}}</div>
         <div>{{localize "CPRED.remaining"}}</div>
+        <div>{{localize "CPRED.degrade"}}</div>
       </li>
       {{localize "CPRED.armorhead"}}
       <li class="flexrow" data-item-id="{{item.id}}">
@@ -410,10 +410,10 @@
           <input type="number" name="data.armorsetup.armorhead.value" value="{{data.armorsetup.armorhead.value}}">
         </div>
         <div>
-          <input type="number" name="data.armorsetup.armorhead.degrade" value="{{data.armorsetup.armorhead.degrade}}">
+          <input type="number" name="data.armorsetup.armorhead.remain" value="{{data.armorsetup.armorhead.remain}}">
         </div>
         <div>
-          <input type="number" name="data.armorsetup.armorhead.remain" value="{{data.armorsetup.armorhead.remain}}" readonly>
+          <input type="number" name="data.armorsetup.armorhead.degrade" value="{{data.armorsetup.armorhead.degrade}}">
         </div>
       </li>
       {{localize "CPRED.armorbody"}}
@@ -425,10 +425,13 @@
           <input type="number" name="data.armorsetup.armorbody.value" value="{{data.armorsetup.armorbody.value}}">
         </div>
         <div>
+          <input type="number" name="data.armorsetup.armorbody.remain" value="{{data.armorsetup.armorbody.remain}}" >
+        </div>
+        <div>
           <input type="number" name="data.armorsetup.armorbody.degrade" value="{{data.armorsetup.armorbody.degrade}}">
         </div>
         <div>
-          <input type="number" name="data.armorsetup.armorbody.remain" value="{{data.armorsetup.armorbody.remain}}" readonly>
+          <input type="number" name="data.armorsetup.armorbody.remain" value="{{data.armorsetup.armorbody.remain}}" >
         </div>
       </li>
       {{localize "CPRED.armorshield"}}
@@ -440,10 +443,10 @@
           <input type="number" name="data.armorsetup.armorshield.value" value="{{data.armorsetup.armorshield.value}}">
         </div>
         <div>
-          <input type="number" name="data.armorsetup.armorshield.degrade" value="{{data.armorsetup.armorshield.degrade}}">
+          <input type="number" name="data.armorsetup.armorshield.remain" value="{{data.armorsetup.armorshield.remain}}">
         </div>
         <div>
-          <input type="number" name="data.armorsetup.armorshield.remain" value="{{data.armorsetup.armorshield.remain}}" readonly>
+          <input type="number" name="data.armorsetup.armorshield.degrade" value="{{data.armorsetup.armorshield.degrade}}">
         </div>
       </li>
     </div>

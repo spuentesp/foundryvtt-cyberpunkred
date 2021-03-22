@@ -387,18 +387,24 @@ export class cyberpunkredActor extends Actor {
     //Calculate armor
 
     if(!data.armorsetup.armorhead.value) {
-      data.armorsetup.armorhead.value = 0; data.armorsetup.armorhead.remain = 0
+      data.armorsetup.armorhead.value = 0;
+      data.armorsetup.armorhead.remain = 0;
+      data.armorsetup.armorhead.degrade = 0;
     };
     if(!data.armorsetup.armorbody.value) {
-      data.armorsetup.armorbody.value = 0; data.armorsetup.armorbody.remain = 0
+      data.armorsetup.armorbody.value = 0;
+      data.armorsetup.armorbody.remain = 0;
+      data.armorsetup.armorbody.degrade = 0;
     };
     if(!data.armorsetup.armorshield.value) {
-      data.armorsetup.armorshield.value = 0; data.armorsetup.armorshield.remain = 0
+      data.armorsetup.armorshield.value = 0;
+      data.armorsetup.armorshield.remain = 0;
+      data.armorsetup.armorshield.degrade = 0;
     };
 
     data.armorsetup.armorhead.degrade = Number(data.armorsetup.armorhead.value) - data.armorsetup.armorhead.remain
-    data.armorsetup.armorbody.degrade = Number(data.armorsetup.armorhead.value) - data.armorsetup.armorhead.remain
-    data.armorsetup.armorshield.degrade = Number(data.armorsetup.armorhead.value) - data.armorsetup.armorhead.remain
+    data.armorsetup.armorbody.degrade = Number(data.armorsetup.armorbody.value) - data.armorsetup.armorbody.remain
+    data.armorsetup.armorshield.degrade = Number(data.armorsetup.armorshield.value) - data.armorsetup.armorshield.remain
 
     //####################
     //

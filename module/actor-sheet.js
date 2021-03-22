@@ -238,7 +238,7 @@ export class cyberpunkredActorSheet extends ActorSheet {
       }
       if (newArmor < 0) {
         newArmor = 0;
-      }
+      }d
       actor.update({
         "data.armorsetup.armorbody.remain": newArmor
       });

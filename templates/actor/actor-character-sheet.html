@@ -28,7 +28,6 @@
     <div data-augmented-ui="tl-clip border" class="cpr-nav-item"><a class="item" data-tab="biography">{{localize "CPRED.bio"}}</a></div>
     <div data-augmented-ui="tl-clip border" class="cpr-nav-item"><a class="item" data-tab="appearance">{{localize "CPRED.appearance"}}</a></div>
     <div data-augmented-ui="tl-clip border" class="cpr-nav-item"><a class="item" data-tab="attrnskills">{{localize "CPRED.attrnskills"}}</a></div>
-    <div data-augmented-ui="tl-clip border" class="cpr-nav-item"><a class="item" data-tab="armorsetup">{{localize "CPRED.armorsetup"}}</a></div>
     <div data-augmented-ui="tl-clip border" class="cpr-nav-item"><a class="item" data-tab="humanityarray">{{localize "CPRED.humanitytrack"}}</a></div>
     <div data-augmented-ui="tl-clip border" class="cpr-nav-item"><a class="item" data-tab="modlog">{{localize "CPRED.modlog"}}</a></div>
     {{#if data.settings.showtabs.netrunner}}
@@ -38,6 +37,7 @@
     {{#if data.settings.prefs.showInventory}}
     <div data-augmented-ui="tl-clip border" class="cpr-nav-item"><a class="item" data-tab="cyberware">{{localize "CPRED.cyberware"}}</a></div>
     <div data-augmented-ui="tl-clip border" class="cpr-nav-item"><a class="item" data-tab="weapons">{{localize "CPRED.weapons"}}</a></div>
+    <div data-augmented-ui="tl-clip border" class="cpr-nav-item"><a class="item" data-tab="armor">{{localize "CPRED.armor"}}</a></div>
     <div data-augmented-ui="tl-clip border" class="cpr-nav-item"><a class="item" data-tab="gear">{{localize "CPRED.gear"}}</a></div>
     {{/if}}
     <div data-augmented-ui="tl-clip border" class="cpr-nav-item"><a class="item" data-tab="playernotes">{{localize "CPRED.playernotes"}}</a></div>
@@ -392,62 +392,7 @@
         {{/if}}
         {{/each}} </div>
       {{/each}} </div>
-    {{!-- Armor Setup Tab --}}
-    <div class="tab cprgraphics" data-group="primary" data-tab="armorsetup">
-      <h3>{{localize "CPRED.armorheading"}}</h3>
-      <li class="flexrow">
-        <div>{{localize "CPRED.name"}}</div>
-        <div>{{localize "CPRED.value"}}</div>
-        <div>{{localize "CPRED.remaining"}}</div>
-        <div>{{localize "CPRED.degrade"}}</div>
-      </li>
-      {{localize "CPRED.armorhead"}}
-      <li class="flexrow" data-item-id="{{item.id}}">
-        <div>
-          <input type="text" name="data.armorsetup.armorhead.name" value="{{data.armorsetup.armorhead.name}}">
-        </div>
-        <div>
-          <input type="number" name="data.armorsetup.armorhead.value" value="{{data.armorsetup.armorhead.value}}">
-        </div>
-        <div>
-          <input type="number" name="data.armorsetup.armorhead.remain" value="{{data.armorsetup.armorhead.remain}}">
-        </div>
-        <div>
-          <input type="number" name="data.armorsetup.armorhead.degrade" value="{{data.armorsetup.armorhead.degrade}}">
-        </div>
-      </li>
-      {{localize "CPRED.armorbody"}}
-      <li class="flexrow" data-item-id="{{item.id}}">
-        <div>
-          <input type="text" name="data.armorsetup.armorbody.name" value="{{data.armorsetup.armorbody.name}}">
-        </div>
-        <div>
-          <input type="number" name="data.armorsetup.armorbody.value" value="{{data.armorsetup.armorbody.value}}">
-        </div>
-        <div>
-          <input type="number" name="data.armorsetup.armorbody.remain" value="{{data.armorsetup.armorbody.remain}}" >
-        </div>
-        <div>
-          <input type="number" name="data.armorsetup.armorbody.degrade" value="{{data.armorsetup.armorbody.degrade}}">
-        </div>
-      </li>
-      {{localize "CPRED.armorshield"}}
-      <li class="flexrow" data-item-id="{{item.id}}">
-        <div>
-          <input type="text" name="data.armorsetup.armorshield.name" value="{{data.armorsetup.armorshield.name}}">
-        </div>
-        <div>
-          <input type="number" name="data.armorsetup.armorshield.value" value="{{data.armorsetup.armorshield.value}}">
-        </div>
-        <div>
-          <input type="number" name="data.armorsetup.armorshield.remain" value="{{data.armorsetup.armorshield.remain}}">
-        </div>
-        <div>
-          <input type="number" name="data.armorsetup.armorshield.degrade" value="{{data.armorsetup.armorshield.degrade}}">
-        </div>
-      </li>
-    </div>
-    {{!-- Armor Tab --}}
+
 
     <div class="tab cprgraphics" data-group="primary" data-tab="combat">
     {{!-- Bullet List Indicators for Current HP and Luck --}}
@@ -473,42 +418,6 @@
         </div>
         {{!-- LUCK POOL END --}}
 
-
-      {{!-- ARMOR POOL START --}}
-      <div class="cprgraphics">
-        <h3>{{localize "CPRED.armorhead"}} ({{localize "CPRED.reduction"}} : {{data.combatsetup.armorhead.remain}})</h3>
-        {{{buildHeadArmorTrack data.combatsetup.armorsetup.armorhead.remain data.combatsetup.armorsetup.armorhead.value}}}<br>
-        <ol class="grid grid-8col">
-          <i class="grid alterheadarmor clickable" data-change="-1">-1, Regular Hit</i>
-          <i class="grid alterheadarmor clickable" data-change="-2">-2, AP Hit</i>
-          <i class="grid alterheadarmor clickable" data-change="-9999">{{localize "CPRED.zero"}}</i>
-          <i class="grid alterheadarmor clickable" data-change="+9999">{{localize "CPRED.full"}}</i>
-        </ol>
-      </div>
-
-      <div class="cprgraphics">
-        <h3>{{localize "CPRED.armorbody"}} ({{localize "CPRED.reduction"}} : {{data.combatsetup.armorsetup.armorbody.remain}})</h3>
-        {{{buildBodyArmorTrack data.combatsetup.armorsetup.armorbody.remain data.combatsetup.armorsetup.armorbody.value}}}<br>
-        <ol class="grid grid-8col">
-          <i class="grid alterbodyarmor clickable" data-change="-1">-1, Regular Hit</i>
-          <i class="grid alterbodyarmor clickable" data-change="-2">-2, AP Hit</i>
-          <i class="grid alterbodyarmor clickable" data-change="-9999">{{localize "CPRED.zero"}}</i>
-          <i class="grid alterbodyarmor clickable" data-change="+9999">{{localize "CPRED.full"}}</i>
-        </ol>
-      </div>
-
-      <div class="cprgraphics">
-        <h3>{{localize "CPRED.armorshield"}} ({{data.combatsetup.armorsetuparmorshield.remain}} / {{data.combatsetup.armorsetup.armorshield.value}})</h3>
-        {{{buildShieldArmorTrack data.combatsetup.armorsetup.armorshield.remain data.combatsetup.armorsetup.armorshield.value}}}<br>
-        <ol class="grid grid-8col">
-          <i class="grid altershieldarmor clickable" data-change="-10">-10</i>
-          <i class="grid altershieldarmor clickable" data-change="-5">-5</i>
-          <i class="grid altershieldarmor clickable" data-change="-1">-1</i>
-          <i class="grid altershieldarmor clickable" data-change="-9999">{{localize "CPRED.zero"}}</i>
-          <i class="grid altershieldarmor clickable" data-change="+9999">{{localize "CPRED.full"}}</i>
-        </ol>
-      </div>
-      {{!-- armor POOL END --}}
 
         {{!-- ROLL MODIFIERS START --}}
         {{!-- TODO: To make internal tabs need to override the _onChangeTab(event, tabs, active) method in your sheet class. Check out module/actor/sheet/base.js in the starfinder system. --}}
@@ -655,25 +564,16 @@
           <div class="item-name">Name</div>
           <div class="item-controls"> <a class="item-control item-create" title="Create item" data-type="cyberware"><i class="fas fa-plus"></i> Add item</a> </div>
         </li>
-        {{#each actor.cyberware as |item id|}}
+        {{#cyberware_sort actor.cyberware as |item id|}}
         <li class="item flexrow" data-item-id="{{item._id}}">
           <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
           <h4 class="item-name">{{item.name}}</h4>
+          <h4 class="item-name cpr-roll-brightred" >{{localize (concat "CPRED." item.data.location)}}</h4>
           <div class="item-controls"> <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a> <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a> </div>
         </li>
-        {{/each}}
+        {{/cyberware_sort}}
 
-        <li class="item flexrow item-header">
-          <div class="item-image"></div>
-          <div class="item-name">Audio</div>
-        </li>
-        {{#cyberware_filter actor.cyberware "audio" as |item id|}}
-        <li class="item flexrow" data-item-id="{{item._id}}">
-          <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-          <h4 class="item-name">{{item.name}}</h4>
-          <div class="item-controls"> <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a> <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a> </div>
-        </li>
-        {{/cyberware_filter}}
+
 
       </ol>
     </div>

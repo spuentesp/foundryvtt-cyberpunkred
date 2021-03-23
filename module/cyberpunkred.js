@@ -314,14 +314,8 @@ Hooks.once('init', async function () {
       .join('\n')
   });
 
-  Handlebars.registerHelper('cyberware_filter', function(list, location, opts) {
-    console.log(arguments);
-    var i, result = '';
-    if(!list || list.length === 0) return result;
-    for(i = 0; i < list.length; ++i)
-      if(list[i].data.location.value == location)
-        result = result + opts.fn(list[i]);
-    return result;
+  Handlebars.registerHelper('cyberware_sort', function(list, opts) {
+    return list.sort((a, b) => (a.data.location.value > b.data.location.value) ? 1 : -1);
   });
 
 });

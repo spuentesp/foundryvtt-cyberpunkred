@@ -99,7 +99,7 @@ export class cyberpunkredActorSheet extends ActorSheet {
         cyberware.push(i);
       }
       else if (i.type === 'armor') {
-        cyberware.push(i);
+        armor.push(i);
       }
 
       // Assign and return

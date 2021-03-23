@@ -125,20 +125,19 @@
         {{#if_eq data.temp.type "gear"}}
         {{/if_eq}}
 
-        {{!-- armor section}}
-        {{#if_eq data.temp.type "armor"}}
+        {{!-- armor section --}}
+        {{#if_eq data.temp.type "gear"}}
         {{localize "CPRED.maxarmor"}}: <input type="number" name="data.maxarmor" value="{{data.maxarmor}}">
         {{localize "CPRED.ablation"}}: <input type="number" name="data.ablation" value="{{data.ablation}}">
         {{localize "CPRED.curarmor"}}: <b class="cpr-roll-brightred">{{getCurrentArmor data.maxarmor data.ablation}}</b>
-        {{localize "CPRED.weapontype"}}
+        {{localize "CPRED.armortype"}}
         <select name="data.armortype" class="cpr-roll-brightred">
         {{#select data.armortype}}
         <option value="armorhead">{{localize "CPRED.armorhead"}}</option>
         <option value="armorbody">{{localize "CPRED.armorbody"}}</option>
         <option value="armorshield">{{localize "CPRED.armorshield"}}</option>
-          {{/select}}
         </select>
-
+        {{/select}}
         {{/if_eq}}
       </div>
     </div>

@@ -496,8 +496,8 @@
         {{#each actor.armor as |item id|}}
         <li class="flexrow" data-item-id="{{id}}">
           <label class="cpr-weaponinlinebox">{{item.name}}<br>
-            ({{localize "CPRED.ammo"}} {{getCurrentArmor data.maxarmor data.ablation}}/{{item.data.maxarmor}})
-            &nbsp; <i class="alterammo clickable" data-armorid="{{item._id}}" data-change="1">-1</i>
+            ({{localize "CPRED.armorheading"}} {{getCurrentArmor data.maxarmor data.ablation}}/{{item.data.maxarmor}})
+            &nbsp; <i class="alterarmor clickable" data-armorid="{{item._id}}" data-change="+1">1 {{localize CPRED.damage}}</i>
           </label>
         </li>
         {{/each}} </div>

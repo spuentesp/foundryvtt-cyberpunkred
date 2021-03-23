@@ -256,10 +256,10 @@ export class cyberpunkredActorSheet extends ActorSheet {
       const item = actor.data.items.find(i => i._id === armorID);
 
       var ablationchange = $(ev.currentTarget).attr("data-change") * 1;
-      var newAmmo = (item.data.ablation * 1) + (ablationchange * 1);
+      var newAblation = (item.data.ablation * 1) + (ablationchange * 1);
       actor.updateOwnedItem({
         _id: armorID,
-        "data.ammo.value": newAmmo
+        "data.armor.ablation": newAblation
       });
     });
 

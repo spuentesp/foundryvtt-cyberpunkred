@@ -28,7 +28,7 @@ ui_and_data_update:
 
 # Suggestions
 
-If you wish to make suggestions, please submit issues on the Github issue tracker or use my Discord: https://discord.gg/dET9xA6
+If you wish to make suggestions, please submit issues on the Github issue tracker or send me a message.
 
 # General Design Plans
 

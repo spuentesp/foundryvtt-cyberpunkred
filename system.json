@@ -6,7 +6,7 @@
   "minimumCoreVersion": "0.7.8",
   "compatibleCoreVersion": "0.7.9",
   "templateVersion": 3,
-  "author": "Gerdofal / Daolothh",
+  "author": "Gerdofal / Daoloth",
   "esmodules": ["module/cyberpunkred.js"],
   "styles": ["css/augmented-ui.min.css", "css/cyberpunkred.css"],
   "packs": [],
@@ -44,5 +44,5 @@
   "url": "https://raw.githubusercontent.com/spuentesp/foundryvtt-cyberpunkred/stable_release/README.md",
   "manifest": "https://raw.githubusercontent.com/spuentesp/foundryvtt-cyberpunkred/stable_release/system.json",
   "download": "https://github.com/spuentesp/foundryvtt-cyberpunkred/archive/stable_release.zip",
-  "license": "Copyright 2020 @gerdofal#0763 - License Terms GNU GPL v3 see file license.md"
+  "license": "Copyright 2020 @spuentesp, based on Gerdofal's work.- License Terms GNU GPL v3 see file license.md"
 }

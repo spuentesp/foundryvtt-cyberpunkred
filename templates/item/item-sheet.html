@@ -37,7 +37,8 @@
         {{localize "CPRED.internal"}}<input type="checkbox" name="data.internal.value" value="{{data.internal.value}}" {{checked data.internal.value}}>
         {{localize "CPRED.hackable"}}<input type="checkbox" name="data.hackable.value" value="{{data.internal.value}}" {{checked data.hackable.value}}>
         {{localize "CPRED.psychosis"}}<input type="number" name="data.psychosis.value" value="{{data.psychosis.value}}">
-        {{localize "CPRED.psychosis"}}
+        {{localize "CPRED.weapontype"}}
+        <select name="data.location.value" class="cpr-roll-brightred">
         {{#select data.location}}
         <option value="audio">{{localize "CPRED.audio"}}</option>
         <option value="righteye">{{localize "CPRED.righteye"}}</option>
@@ -52,6 +53,7 @@
         <option value="fashionware">{{localize "CPRED.fashionware"}}</option>
         <option value="borgware">{{localize "CPRED.borgware"}}</option>
         {{/select}}
+        </select>
         {{/if_eq}}
 
         {{!-- Weapons Section --}}

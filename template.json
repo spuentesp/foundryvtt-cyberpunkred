@@ -1041,7 +1041,7 @@
       },
       "armorpiece": {
         "name": "Name",
-        "maxArmor": 1,
+        "maxarmor": 1,
         "ablation": 0,
         "armortype":"armorbody"
       }

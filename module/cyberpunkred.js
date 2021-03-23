@@ -319,7 +319,7 @@ Hooks.once('init', async function () {
     var i, result = '';
     if(!list || list.length === 0) return result;
     for(i = 0; i < list.length; ++i)
-      if(list[i][k] == v)
+      if(list[i][k].value == v)
         result = result + opts.fn(list[i]);
     return result;
   });

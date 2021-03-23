@@ -181,7 +181,7 @@ span.part-formula {
 .cyberpunkred .cprgraphics, #chat-log .message {
   background: var(--cpr-app-bak-color);
   color: var(--cpr-red-color);
-  padding-top: 12px !important;
+  padding-top: 9px !important;
   padding-bottom: 3px !important; 
   box-sizing: border-box;
   image-rendering: crisp-edges;

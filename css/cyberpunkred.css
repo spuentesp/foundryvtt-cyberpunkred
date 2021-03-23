@@ -83,6 +83,9 @@ span.part-formula {
 .cpr-roll-brightred {
   color: var(--cpr-red-bright-red);
 }
+.cpr-roll-bigletters {
+  font-size: 1.5em;
+}
 
 
 .cpr-roll-flavor {

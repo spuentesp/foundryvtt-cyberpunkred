@@ -44,7 +44,7 @@ Hooks.once('renderSidebar', function (sidebar) {
   _cprLog('Updating links');
 
   for (var tabLink of navChildren) {
-    tabLink.setAttribute('data-augmented-ui', 'tl-clip tr-clip border');
+    tabLink.setAttribute('data-augmented-ui', 'border');
   };
 });
 

@@ -33,7 +33,7 @@ form .notes, form .hint {
 }
 
 .chat-message .message-header{
-  color: var(--cpr-red-bright-color) !important;
+  color: var(--cpr-red-bright-red) !important;
 }
 
 #module-management .package-list .package-title,

@@ -28,7 +28,17 @@
   color: var(--cpr-red-color) !important;
 }
 
-#module-management .package-list .package-title, #module-management .package-list .package-metadata, #module-management .package-list .package-description {
+form .notes, form .hint {
+  color: var(--cpr-red-color) !important;
+}
+
+.chat-message .message-header{
+  color: var(--cpr-red-bright-color) !important;
+}
+
+#module-management .package-list .package-title,
+#module-management .package-list .package-metadata,
+#module-management .package-list .package-description {
   color: white !important;
 }
 
@@ -40,6 +50,10 @@ button {
   border: 2px solid var(--cpr-red-color) !important;
   background-color: var(--cpr-red-dark-red) !important;
   color: var(--cpr-red-color) !important;
+}
+
+padding-cell-chat {
+  padding: 9px !important;
 }
 
 input[type="text"],

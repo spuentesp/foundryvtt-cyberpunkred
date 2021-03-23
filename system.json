@@ -1,5 +1,5 @@
 {
-  "version": 0.500,
+  "version": 0.501,
   "name": "CPRED-V2",
   "title": "Cyberpunk RED - V2",
   "description": "Cyberpunk RED, taken from previous repo from Gerdofal with some opinionated updates.",
@@ -41,8 +41,8 @@
   "gridUnits": "m",
   "primaryTokenAttribute": "combatstats.healthpool",
   "secondaryTokenAttribute": "combatstats.luckpool",
-  "url": "https://raw.githubusercontent.com/spuentesp/foundryvtt-cyberpunkred/stable_release/README.md",
-  "manifest": "https://raw.githubusercontent.com/spuentesp/foundryvtt-cyberpunkred/stable_release/system.json",
-  "download": "https://github.com/spuentesp/foundryvtt-cyberpunkred/archive/stable_release.zip",
+  "url": "https://raw.githubusercontent.com/spuentesp/foundryvtt-cyberpunkred/ui_and_data_updtes/README.md",
+  "manifest": "https://raw.githubusercontent.com/spuentesp/foundryvtt-cyberpunkred/ui_and_data_updtes/system.json",
+  "download": "https://github.com/spuentesp/foundryvtt-cyberpunkred/archive/ui_and_data_updtes.zip",
   "license": "Copyright 2020 @spuentesp, based on Gerdofal's work.- License Terms GNU GPL v3 see file license.md"
 }

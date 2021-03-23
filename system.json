@@ -5,7 +5,7 @@
   "description": "Cyberpunk RED, taken from previous repo from Gerdofal with some opinionated updates.",
   "minimumCoreVersion": "0.7.8",
   "compatibleCoreVersion": "0.7.9",
-  "templateVersion": 2,
+  "templateVersion": 3,
   "author": "Gerdofal / Daolothh",
   "esmodules": ["module/cyberpunkred.js"],
   "styles": ["css/augmented-ui.min.css", "css/cyberpunkred.css"],

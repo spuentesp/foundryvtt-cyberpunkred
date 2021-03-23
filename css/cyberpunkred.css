@@ -28,7 +28,7 @@
   color: var(--cpr-red-color) !important;
 }
 
-form .form-group .form-fields {
+select {
   color: var(--cpr-red-bright-red) !important;
 }
 

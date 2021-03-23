@@ -29,7 +29,7 @@
 }
 
 form .form-group .form-fields {
-  color: var(--cpr-red-bright-red);
+  color: var(--cpr-red-bright-red) !important;
 }
 
 button {

@@ -423,6 +423,37 @@
         </div>
         {{!-- LUCK POOL END --}}
 
+      {{!-- ITEM COMBAT START --}}
+      <div class="cprgraphics">
+        <h3>{{localize "CPRED.itemcombatsection"}}</h3>
+        {{#each actor.weapons as |item id|}}
+        <li class="flexrow" data-item-id="{{id}}">
+          <label class="cpr-weaponinlinebox">{{item.name}}<br>
+            {{#if_not_eq data.ammotype.value "none"}}
+            ({{localize "CPRED.ammo"}} {{item.data.ammo.value}}/{{item.data.ammo.max}})
+            &nbsp; <i class="reloadammo clickable" data-weaponid="{{item._id}}" >{{localize "CPRED.full"}}</i>
+            &nbsp; <i class="alterammo clickable" data-weaponid="{{item._id}}" data-change="-1">-1</i>
+            &nbsp; <i class="alterammo clickable" data-weaponid="{{item._id}}" data-change="+1">+1</i>
+            {{/if_not_eq}}
+          </label>
+
+          <div class="rollable cpr-weaponinlinebox" data-label="{{item.name}}" data-roll="{{rollSkill item.data.skill.value}}">{{localize "CPRED.attack"}}</div>
+          <div class="rollable cpr-weaponinlinebox" data-label="{{item.name}}" data-roll="{{rollDamage item.data.damage.value}}">{{localize "CPRED.damage"}}</div>
+        </li>
+        {{/each}} </div>
+      <div class="cprgraphics">
+        <h3>{{localize "CPRED.armorheading"}}</h3>
+        {{#each actor.armor as |item id|}}
+        <li class="flexrow" data-item-id="{{id}}">
+          <label class="cpr-weaponinlinebox">{{localize (concat "CPRED." item.data.armortype)}} - {{item.name}}<br>
+            &nbsp; <i class="alterarmor clickable" data-armorid="{{item._id}}" data-change="+1">1 <b>{{localize CPRED.damage}}</b></i>
+          </label>
+          <div class="cpr-weaponinlinebox ">{{localize "CPRED.ablation"}}<br> <b class="cpr-roll-brightred cpr-roll-bigletters">{{item.data.ablation}}</b><b class="cpr-roll-bigletters"> of {{item.data.maxarmor}}</b></div>
+          <div class="cpr-weaponinlinebox ">{{localize "CPRED.curarmor"}}<br> <b class="cpr-roll-brightred cpr-roll-bigletters">{{getCurrentArmor item.data.maxarmor item.data.ablation}}</b></div>
+        </li>
+        {{/each}} </div>
+      {{!-- ITEM COMBAT END --}}
+
 
         {{!-- ROLL MODIFIERS START --}}
         {{!-- TODO: To make internal tabs need to override the _onChangeTab(event, tabs, active) method in your sheet class. Check out module/actor/sheet/base.js in the starfinder system. --}}
@@ -478,36 +509,7 @@
       </ol>
 
 
-        {{!-- ITEM COMBAT START --}}
-        <div class="cprgraphics">
-          <h3>{{localize "CPRED.itemcombatsection"}}</h3>
-          {{#each actor.weapons as |item id|}}
-          <li class="flexrow" data-item-id="{{id}}">
-            <label class="cpr-weaponinlinebox">{{item.name}}<br>
-              {{#if_not_eq data.ammotype.value "none"}}
-              ({{localize "CPRED.ammo"}} {{item.data.ammo.value}}/{{item.data.ammo.max}})
-              &nbsp; <i class="reloadammo clickable" data-weaponid="{{item._id}}" >{{localize "CPRED.full"}}</i>
-              &nbsp; <i class="alterammo clickable" data-weaponid="{{item._id}}" data-change="-1">-1</i>
-              &nbsp; <i class="alterammo clickable" data-weaponid="{{item._id}}" data-change="+1">+1</i>
-              {{/if_not_eq}}
-            </label>
-              
-            <div class="rollable cpr-weaponinlinebox" data-label="{{item.name}}" data-roll="{{rollSkill item.data.skill.value}}">{{localize "CPRED.attack"}}</div>
-            <div class="rollable cpr-weaponinlinebox" data-label="{{item.name}}" data-roll="{{rollDamage item.data.damage.value}}">{{localize "CPRED.damage"}}</div>
-          </li>
-          {{/each}} </div>
-      <div class="cprgraphics">
-        <h3>{{localize "CPRED.armorheading"}}</h3>
-        {{#each actor.armor as |item id|}}
-        <li class="flexrow" data-item-id="{{id}}">
-          <label class="cpr-weaponinlinebox">{{localize (concat "CPRED." item.data.armortype)}} - {{item.name}}<br>
-            &nbsp; <i class="alterarmor clickable" data-armorid="{{item._id}}" data-change="+1">1 <b>{{localize CPRED.damage}}</b></i>
-          </label>
-          <div class="cpr-weaponinlinebox ">{{localize "CPRED.ablation"}}<br> <b class="cpr-roll-brightred cpr-roll-bigletters">{{item.data.ablation}}</b><b class="cpr-roll-bigletters">{{item.data.maxarmor}}</b></div>
-          <div class="cpr-weaponinlinebox ">{{localize "CPRED.curarmor"}}<br> <b class="cpr-roll-brightred cpr-roll-bigletters">{{getCurrentArmor item.data.maxarmor item.data.ablation}}</b></div>
-        </li>
-        {{/each}} </div>
-        {{!-- ITEM COMBAT END --}}
+
 
 
 

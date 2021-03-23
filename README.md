@@ -23,8 +23,7 @@ ui_and_data_update:
 - This system is available in the "Game-systems" browser in-game and may be installed there.
 
 - You can also manually direct your FoundryVTT to the correct manifest. Use this as the manifest URL:
-  - https://raw.githubusercontent.com/Gerdofal/foundryvtt-cyberpunkred/stable_release/system.json
-
+  - https://raw.githubusercontent.com/spuentesp/foundryvtt-cyberpunkred/stable_release/system.json
 - If you want to manually install the files from the development branch, feel free. Just download the zip and install manually. I don't recommend this for anything other than testing as the development branch is sometimes non-functional.
 
 # Suggestions
@@ -34,7 +33,7 @@ If you wish to make suggestions, please submit issues on the Github issue tracke
 # General Design Plans
 
 So far, we have added:
--Armor as items. You can use them in the combat 
+-Armor as items. You can use them in the combat tab.
 -Cyberware now with type! now all your cyberware will be listed and ordered by their body location or type...
 
 # License and Credits

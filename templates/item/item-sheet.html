@@ -37,6 +37,21 @@
         {{localize "CPRED.internal"}}<input type="checkbox" name="data.internal.value" value="{{data.internal.value}}" {{checked data.internal.value}}>
         {{localize "CPRED.hackable"}}<input type="checkbox" name="data.hackable.value" value="{{data.internal.value}}" {{checked data.hackable.value}}>
         {{localize "CPRED.psychosis"}}<input type="number" name="data.psychosis.value" value="{{data.psychosis.value}}">
+        {{localize "CPRED.psychosis"}}
+        {{#select data.location}}
+        <option value="audio">{{localize "CPRED.audio"}}</option>
+        <option value="righteye">{{localize "CPRED.righteye"}}</option>
+        <option value="lefteye">{{localize "CPRED.lefteye"}}</option>
+        <option value="rightarm">{{localize "CPRED.rightarm"}}</option>
+        <option value="leftarm">{{localize "CPRED.leftarm"}}</option>
+        <option value="neurallink">{{localize "CPRED.neurallink"}}</option>
+        <option value="rightleg">{{localize "CPRED.rightleg"}}</option>
+        <option value="leftleg">{{localize "CPRED.leftleg"}}</option>
+        <option value="internal">{{localize "CPRED.internalware"}}</option>
+        <option value="external">{{localize "CPRED.external"}}</option>
+        <option value="fashionware">{{localize "CPRED.fashionware"}}</option>
+        <option value="borgware">{{localize "CPRED.borgware"}}</option>
+        {{/select}}
         {{/if_eq}}
 
         {{!-- Weapons Section --}}
@@ -46,7 +61,7 @@
         {{localize "CPRED.rof"}}<input type="number" name="data.rof.value" value="{{data.rof.value}}">
         {{localize "CPRED.ammomax"}}<input type="number" name="data.ammo.max" value="{{data.ammo.max}}">
         {{localize "CPRED.ammotype"}}
-        <select name="data.ammotype.value">
+        <select name="data.ammotype.value" class="cpr-roll-brightred">
         {{#select data.ammotype.value}}
           <option value="none">{{localize "CPRED.none"}}</option>
           <option value="mpistol">{{localize "CPRED.mpistol"}}</option>
@@ -61,7 +76,7 @@
         {{/select}}
         </select>
         {{localize "CPRED.weapontype"}}
-        <select name="data.weapontype.value">
+        <select name="data.weapontype.value" class="cpr-roll-brightred">
         {{#select data.weapontype.value}}
           <option value="mpistol">{{localize "CPRED.mpistol"}}</option> 
           <option value="hpistol">{{localize "CPRED.hpistol"}}</option>  
@@ -82,7 +97,7 @@
         {{localize "CPRED.burst"}}<input type="checkbox" name="data.burst.value" value="{{data.burst.value}}" {{checked data.burst.value}}>
         {{localize "CPRED.fullauto"}}<input type="checkbox" name="data.fullauto.value" value="{{data.fullauto.value}}"{{checked data.fullauto.value}}>
         {{localize "CPRED.skill"}}
-        <select name="data.skill.value">
+        <select name="data.skill.value" class="cpr-roll-brightred">
         {{#select data.skill.value}}
         {{#if data.backend.jsk}}
           <option value="brawling">{{localize "CPRED.brawling"}}</option>
@@ -105,6 +120,14 @@
         {{!-- Gear Section --}}
         
         {{#if_eq data.temp.type "gear"}}
+        {{/if_eq}}
+
+        {{!-- armor section}}
+        {{#if_eq data.temp.type "armor"}}
+        {{localize "CPRED.maxarmor"}}: <input type="number" name="data.damage.value" value="{{data.maxarmor}}">
+        {{localize "CPRED.ablation"}}: <input type="number" name="data.rof.value" value="{{data.ablation}}">
+        {{localize "CPRED.curarmor"}}: <b class="cpr-roll-brightred">{{getCurrentArmor data.maxarmor data.ablation}}</b>
+
         {{/if_eq}}
       </div>
     </div>

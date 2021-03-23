@@ -919,7 +919,7 @@
     }
   },
   "Item": {
-    "types": ["cyberware", "weapons", "gear"],
+    "types": ["cyberware", "weapons", "gear","armor"],
     "templates": {
       "general": {
         "price": {
@@ -942,6 +942,9 @@
         },
         "psychosis": {
           "value": 0
+        },
+        "location": {
+          "value": "internal"
         }
       },
       "weapon": {
@@ -1035,6 +1038,11 @@
             "modactive": true
           }
         }
+      },
+      "armor": {
+        "name": "Name",
+        "maxArmor": 1,
+        "ablation": 0
       }
     },
     "weapons": {
@@ -1045,6 +1053,9 @@
     },
     "gear": {
       "templates": ["general", "modlist"]
+    },
+    "armor": {
+      "templates": ["general","armor"]
     }
   }
 }

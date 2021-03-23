@@ -683,7 +683,7 @@ export class cyberpunkredActor extends Actor {
     _cprLog("rollCPR - Computing Roll");
 
     //Setup critical variables
-    let template = 'systems/cyberpunkred/templates/chat/roll-cpr.html';
+    let template = 'systems/CPRED-V2/templates/chat/roll-cpr.html';
 
     const data = actorData.data;
 

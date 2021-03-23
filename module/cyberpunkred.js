@@ -143,6 +143,12 @@ Hooks.once('init', async function () {
     return outStr;
   });
 
+  Handlebars.registerHelper('getCurrentArmor', function(maxArmor,ablation){
+    if(maxArmor > 0 && ablation > 0 && ablation<=maxArmor){
+      return maxArmor - ablation
+    }else return 0
+  })
+
 
   //Setup helper for luck track
   Handlebars.registerHelper('buildLuckTrack', function (current, max) {
@@ -308,6 +314,14 @@ Hooks.once('init', async function () {
       .join('\n')
   });
 
+  Handlebars.registerHelper('each_when', function(list, k, v, opts) {
+    console.log(arguments);
+    var i, result = '';
+    for(i = 0; i < list.length; ++i)
+      if(list[i][k] == v)
+        result = result + opts.fn(list[i]);
+    return result;
+  });
 
 });
 

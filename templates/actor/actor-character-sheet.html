@@ -446,7 +446,7 @@
         {{#each actor.armor as |item id|}}
         <li class="flexrow" data-item-id="{{id}}">
           <label class="cpr-weaponinlinebox">{{localize (concat "CPRED." item.data.armortype)}} - {{item.name}}<br>
-            &nbsp; <i class="alterarmor clickable" data-armorid="{{item._id}}" data-change="+1">1 <b>{{localize CPRED.damage}}</b></i>
+            &nbsp; <i class="alterarmor clickable" data-armorid="{{item._id}}" data-change="+1">1 <b>{{localize "CPRED.damage"}}</b></i>
           </label>
           <div class="cpr-weaponinlinebox ">{{localize "CPRED.ablation"}}<br> <b class="cpr-roll-brightred cpr-roll-bigletters">{{item.data.ablation}}</b><b class="cpr-roll-bigletters"> of {{item.data.maxarmor}}</b></div>
           <div class="cpr-weaponinlinebox ">{{localize "CPRED.curarmor"}}<br> <b class="cpr-roll-brightred cpr-roll-bigletters">{{getCurrentArmor item.data.maxarmor item.data.ablation}}</b></div>

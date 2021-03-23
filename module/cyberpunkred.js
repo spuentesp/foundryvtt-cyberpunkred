@@ -314,12 +314,12 @@ Hooks.once('init', async function () {
       .join('\n')
   });
 
-  Handlebars.registerHelper('each_when', function(list, k, v, opts) {
+  Handlebars.registerHelper('cyberware_filter', function(list, location, opts) {
     console.log(arguments);
     var i, result = '';
     if(!list || list.length === 0) return result;
     for(i = 0; i < list.length; ++i)
-      if(list[i][k].value == v)
+      if(list[i].data.location.value == location)
         result = result + opts.fn(list[i]);
     return result;
   });

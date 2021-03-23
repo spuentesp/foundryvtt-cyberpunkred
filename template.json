@@ -1039,7 +1039,7 @@
           }
         }
       },
-      "armor": {
+      "armorpiece": {
         "name": "Name",
         "maxArmor": 1,
         "ablation": 0,
@@ -1056,7 +1056,7 @@
       "templates": ["general", "modlist"]
     },
     "armor": {
-      "templates": ["general","armor","modList"]
+      "templates": ["general","armorpiece","modList"]
     }
   }
 }

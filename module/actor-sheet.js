@@ -18,7 +18,7 @@ export class cyberpunkredActorSheet extends ActorSheet {
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       classes: ["cyberpunkred", "sheet", "actor"],
-      template: "systems/cyberpunkred/templates/actor/actor-sheet.html",
+      template: "systems/CPRED-V2/templates/actor/actor-sheet.html",
       width: 600,
       height: 600,
       tabs: [{
@@ -31,7 +31,7 @@ export class cyberpunkredActorSheet extends ActorSheet {
 
   /** @override */
   get template() {
-    const path = "systems/cyberpunkred/templates/actor";
+    const path = "systems/CPRED-V2/templates/actor";
     // Unique actor sheet by type, like `character-sheet.html`.
     return `${path}/actor-${this.actor.data.type}-sheet.html`;
   }
@@ -80,6 +80,7 @@ export class cyberpunkredActorSheet extends ActorSheet {
     const cyberware = [];
     const weapons = [];
     const gear = [];
+    const armor = [];
 
     // Iterate through items, allocating to containers
     for (let i of sheetData.items) {
@@ -93,15 +94,19 @@ export class cyberpunkredActorSheet extends ActorSheet {
       else if (i.type === 'weapons') {
         weapons.push(i);
       }
-      // Append to spells.
+      // Append to cyberware.
       else if (i.type === 'cyberware') {
         cyberware.push(i);
+      }
+      else if (i.type === 'armor') {
+        armor.push(i);
       }
 
       // Assign and return
       actorData.gear = gear;
       actorData.weapons = weapons;
       actorData.cyberware = cyberware;
+      actorData.armor = armor;
     }
   }
   /* -------------------------------------------- */
@@ -212,6 +217,7 @@ export class cyberpunkredActorSheet extends ActorSheet {
       });
     });
 
+
     //Set current luck based on click on modifier number
     html.find('.alterluck').click(ev => {
       const actor = this.actor;
@@ -241,6 +247,19 @@ export class cyberpunkredActorSheet extends ActorSheet {
       actor.updateOwnedItem({
         _id: weaponID,
         "data.ammo.value": newAmmo
+      });
+    });
+
+    html.find('.alterarmor').click(ev => {
+      const actor = this.actor;
+      var armorID = $(ev.currentTarget).attr("data-armorid");
+      const item = actor.data.items.find(i => i._id === armorID);
+
+      var ablationchange = $(ev.currentTarget).attr("data-change") * 1;
+      var newAblation = (item.data.ablation * 1) + (ablationchange * 1);
+      actor.updateOwnedItem({
+        _id: armorID,
+        "data.ablation": newAblation
       });
     });
 

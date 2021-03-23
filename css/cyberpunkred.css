@@ -4,11 +4,63 @@
 
 :root {
   --cpr-red-color: #fcec0c; /* var(--cpr-red-color) */
+  --cpr-red-bright-red: #bf0505; /* var(--cpr-red-color) */
+  --cpr-red-dark-red: #400000; /* var(--cpr-red-color) */
   --cpr-light-bak-color: #444444; /* var(--cpr-light-bak-color) */
   --cpr-app-bak-color: black; /* var(--cpr-app-bak-color) */
-  --cpr-green-color: #37a51b; /* var(--cpr-green-color) */
+  --cpr-green-color: #1b560d; /* var(--cpr-green-color) */
   --cpr-default-text-size: .90em;
   --cpr-default-small-text-size: .80em;
+}
+
+.my-augfiguration {
+  --aug-tr: 25px;
+  --aug-bl: 57px;
+  --aug-br: 25px;
+  --aug-br-inset2: 40%;
+  --aug-border-all: 10px;
+  --aug-border-bg: linear-gradient(#400000, #600000);
+}
+
+/* overrides */
+.window-app .window-content {
+  background: none !important;
+  color: var(--cpr-red-color) !important;
+}
+
+select {
+  color: var(--cpr-red-bright-red) !important;
+}
+
+button {
+  border: 2px solid var(--cpr-red-color) !important;
+  background-color: var(--cpr-red-dark-red) !important;
+  color: var(--cpr-red-color) !important;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="date"],
+input[type="time"] {
+  border: 2px solid #7a7971 !important;
+  color: var(--cpr-red-color) !important;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus{
+  color: white;
+}
+
+form .form-group label {
+  color: var(--cpr-red-color) !important;
+}
+
+.window-app .window-content {
+  color: var(--cpr-red-color) !important;
 }
 
 
@@ -26,6 +78,13 @@ span.part-formula {
 .cpr-roll-title {
   font-size: 1.5em;
   border-bottom: 2px solid var(--cpr-red-color);
+}
+
+.cpr-roll-brightred {
+  color: var(--cpr-red-bright-red);
+}
+.cpr-roll-bigletters {
+  font-size: 1.5em;
 }
 
 
@@ -65,13 +124,13 @@ span.part-formula {
 
 /* Rolls */
 .dice-roll .dice-formula {
-  background: #FFFFFF;
+  background: #000000;
   display: block;
   padding-left: 10px;
   padding-right: 10px;
 }
 .dice-roll .dice-total {
-  background: #FFAAAA;
+  background: #4c1414;
   display: inline-block;
   font-weight: normal;
   padding: 0px 10px 0px 10px;
@@ -90,7 +149,7 @@ span.part-formula {
   top: -23px;
 }
 .dice-roll .dice-tooltip {
-  background: #FFEEEE;
+  background: #110000;
   padding-left: 10px;
   padding-right: 10px;
   display: inline-block;
@@ -127,16 +186,9 @@ span.part-formula {
 
 /* Add graphical border around this block */
 .cyberpunkred .cprgraphics, #chat-log .message {
-  border: 10px ridge #FF1010;
-	border-image-source: url("crredborder.jpg?ver1"); /* source url */
-	border-image-source: url("crredborder.jpg?ver1"); /* source url */
-	border-image-slice: 17 0 17 9;
-	border-image-width: 17px 0px 17px 9px;
-	border-image-outset: 0px;
-	border-image-repeat: stretch;
   background: var(--cpr-app-bak-color);
   color: var(--cpr-red-color);
-  padding-top: 5px !important;
+  padding-top: 9px !important;
   padding-bottom: 3px !important; 
   box-sizing: border-box;
   image-rendering: crisp-edges;
@@ -159,7 +211,6 @@ span.part-formula {
 
 #sidebar-tabs > .item.active, #sidebar-tabs > .item, #players {
   color: var(--cpr-red-color);
-  border: 1px solid var(--cpr-red-color);
   background: var(--cpr-app-bak-color);
 }
 
@@ -253,9 +304,10 @@ span.part-formula {
 /* Main grid with header, left nav, and right content */
 .cyberpunkred .cpr-grid {
   display: grid;
-  grid-template-columns: 90px auto;
-  grid-template-rows: 40px auto;;
+  grid-template-columns: 115px auto;
+  grid-template-rows: 40px auto;
   padding: 3px;
+  padding-right:-3px;
 }
 .cyberpunkred .cpr-header {
   grid-column: 1 / span 2;
@@ -274,13 +326,13 @@ span.part-formula {
   align-content: start;
   border-right: 1px solid #222;
   padding: 0px 0px 0px 0px;
-  margin: 0px 0px 0px 0px;
+  margin: 30px 0px 0px 0px;
 }
 .cyberpunkred .cpr-content {
   grid-column: 2;
   grid-row: 2;
   border: none;
-  padding: 3px;
+  padding: 7px;
   vertical-align: top;
   text-align: left;
 }
@@ -289,7 +341,7 @@ span.part-formula {
 .cyberpunkred .cpr-nav .cpr-nav-item {
   justify-self: start;
   display: block;
-  height: 25px;
+  height: 30px;
   width: 100%;
   padding: 0px;
   margin: 0px;
@@ -301,29 +353,20 @@ span.part-formula {
   font-weight: normal;
   display: block;
   width: 100%;
-  padding: 5px 5px 5px 5px;
+  padding: 5px 5px 5px 20px;
   margin: 0px;
-  height: 25px;
-  background: var(--cpr-light-bak-color);
-  border-left: 1px solid var(--cpr-red-color);
-  border-top: 1px solid var(--cpr-red-color);
-  border-bottom: 1px solid var(--cpr-red-color);
-  border-radius: 10px 0px 0px 0px;
+  height: 30px;
+  background: var(--cpr-red-dark-red);
   font-size: var(--cpr-default-text-size);
   white-space: nowrap;
 }
 .cyberpunkred .cpr-nav .cpr-nav-item .item.active {
-  text-decoration: underline;
   text-shadow: none;
   font-weight: bold;
-  padding: 5px 5px 5px 5px;
+  padding: 5px 5px 5px 20px;
   margin: 0px;
-  height: 25px;
-  background: linear-gradient(#000000,#202020);
-  border-left: 1px solid var(--cpr-red-color);
-  border-top: 1px solid var(--cpr-red-color);
-  border-bottom: 1px solid var(--cpr-red-color);
-  border-radius: 10px 0px 0px 0px;
+  height: 30px;
+  background: linear-gradient(var(--cpr-red-bright-red),var(--cpr-red-bright-red));
   font-size: var(--cpr-default-text-size);
 }
 
@@ -408,9 +451,10 @@ span.part-formula {
 }
 
 .cyberpunkred .humanityButton {
-  background-color: #FF9799;
+  background-color: var(--cpr-red-dark-red);
   color: black;
 }
+
 
 /* Attributes and Skills Tab */
 .cyberpunkred .width50 {
@@ -593,7 +637,7 @@ span.part-formula {
 }
 
 .cyberpunkred input.settings[type=checkbox]:checked + label {
-  background-color: #90FF90;
+  background-color: #0b400b;
 	font-weight: bold;
   border: 1px solid var(--cpr-red-color);
   border-color: var(--cpr-red-color);
@@ -662,7 +706,7 @@ span.part-formula {
 }
 
 .cyberpunkred input.modlist[type=checkbox]:checked + label {
-  background-color: #FF9090;
+  background-color: var(--cpr-red-dark-red);;
 	font-weight: bold;
   border: 1px solid var(--cpr-red-color);
   border-color: var(--cpr-red-color);
@@ -680,7 +724,7 @@ span.part-formula {
 }
 
 .cyberpunkred input:read-only {
-  background-color: #DCA9AA;
+  background-color: var(--cpr-red-dark-red);;
 }
 
 /* Grid Setups */
@@ -758,7 +802,7 @@ span.part-formula {
 .cyberpunkred .npc-button-array button {
   border: 0px solid green; /* Green border */
   color: white;
-  background-color: #702020;
+  background-color: var(--cpr-red-dark-red);;
   cursor: pointer; /* Pointer/hand icon */
   float: left; /* Float the buttons side by side */
   box-sizing: border-box;

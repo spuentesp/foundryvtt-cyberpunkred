@@ -480,6 +480,7 @@
         {{!-- SPECIAL ROLLS START --}}
         <div class="cprgraphics">
           <h3>{{localize "CPRED.specialrolls"}}</h3>
+          <br>
           <ol class="specialroll-grid">
             <ol class="specialroll-item">
               <label for="Death Save" data-label='{{localize "CPRED.deathsaverolllabela"}} {{data.attributes.body.roll}}{{localize "CPRED.deathsaverolllabelb"}}' data-roll="{{RollDeathSave (concat '1d10' '+' data.combatstats.deathsave.penalty) }}" class="rollable deathsave">{{localize "CPRED.deathsave"}} (+{{data.combatstats.deathsave.penalty}})</label>

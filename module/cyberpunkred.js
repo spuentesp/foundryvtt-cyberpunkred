@@ -144,7 +144,7 @@ Hooks.once('init', async function () {
   });
 
   Handlebars.registerHelper('getCurrentArmor', function(maxArmor,ablation){
-    if(maxArmor > 0 && ablation > 0 && ablation<=maxArmor){
+    if(maxArmor > 0 && ablation >= 0 && ablation<=maxArmor){
       return maxArmor - ablation
     }else return 0
   })

@@ -5,6 +5,7 @@
 :root {
   --cpr-red-color: #fcec0c; /* var(--cpr-red-color) */
   --cpr-red-bright-red: #bf0505; /* var(--cpr-red-color) */
+  --cpr-red-very-bright-red: #ff0000; /* var(--cpr-red-color) */
   --cpr-red-dark-red: #400000; /* var(--cpr-red-color) */
   --cpr-light-bak-color: #444444; /* var(--cpr-light-bak-color) */
   --cpr-app-bak-color: black; /* var(--cpr-app-bak-color) */
@@ -33,7 +34,7 @@ form .notes, form .hint {
 }
 
 .chat-message .message-header{
-  color: var(--cpr-red-bright-red) !important;
+  color: var(--cpr-red-very-bright-red) !important;
 }
 
 #module-management .package-list .package-title,

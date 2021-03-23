@@ -126,7 +126,7 @@
         {{/if_eq}}
 
         {{!-- armor section --}}
-        {{#if_eq data.temp.type "gear"}}
+        {{#if_eq data.temp.type "armor"}}
         {{localize "CPRED.maxarmor"}}: <input type="number" name="data.maxarmor" value="{{data.maxarmor}}">
         {{localize "CPRED.ablation"}}: <input type="number" name="data.ablation" value="{{data.ablation}}">
         {{localize "CPRED.curarmor"}}: <b class="cpr-roll-brightred">{{getCurrentArmor data.maxarmor data.ablation}}</b>

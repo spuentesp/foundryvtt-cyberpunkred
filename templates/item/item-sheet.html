@@ -39,7 +39,7 @@
         {{localize "CPRED.psychosis"}}<input type="number" name="data.psychosis.value" value="{{data.psychosis.value}}">
         {{localize "CPRED.weapontype"}}
         <select name="data.location.value" class="cpr-roll-brightred">
-        {{#select data.location}}
+        {{#select data.location.value}}
         <option value="audio">{{localize "CPRED.audio"}}</option>
         <option value="righteye">{{localize "CPRED.righteye"}}</option>
         <option value="lefteye">{{localize "CPRED.lefteye"}}</option>
@@ -129,7 +129,13 @@
         {{localize "CPRED.maxarmor"}}: <input type="number" name="data.maxarmor" value="{{data.maxarmor}}">
         {{localize "CPRED.ablation"}}: <input type="number" name="data.ablation" value="{{data.ablation}}">
         {{localize "CPRED.curarmor"}}: <b class="cpr-roll-brightred">{{getCurrentArmor data.maxarmor data.ablation}}</b>
-
+        {{localize "CPRED.weapontype"}}
+        <select name="data.armortype" class="cpr-roll-brightred">
+        {{#select data.armortype}}
+        <option value="armorhead">{{localize "CPRED.armorhead"}}</option>
+        <option value="armorbody">{{localize "CPRED.armorbody"}}</option>
+        <option value="armorshield">{{localize "CPRED.armorshield"}}</option>
+        {{/select}}
         {{/if_eq}}
       </div>
     </div>

@@ -80,6 +80,7 @@ export class cyberpunkredActorSheet extends ActorSheet {
     const cyberware = [];
     const weapons = [];
     const gear = [];
+    const armor = [];
 
     // Iterate through items, allocating to containers
     for (let i of sheetData.items) {
@@ -93,8 +94,11 @@ export class cyberpunkredActorSheet extends ActorSheet {
       else if (i.type === 'weapons') {
         weapons.push(i);
       }
-      // Append to spells.
+      // Append to cyberware.
       else if (i.type === 'cyberware') {
+        cyberware.push(i);
+      }
+      else if (i.type === 'armor') {
         cyberware.push(i);
       }
 
@@ -102,6 +106,7 @@ export class cyberpunkredActorSheet extends ActorSheet {
       actorData.gear = gear;
       actorData.weapons = weapons;
       actorData.cyberware = cyberware;
+      actorData.armor = armor;
     }
   }
   /* -------------------------------------------- */

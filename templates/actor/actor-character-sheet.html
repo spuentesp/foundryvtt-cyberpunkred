@@ -37,7 +37,7 @@
     {{#if data.settings.prefs.showInventory}}
     <div data-augmented-ui="tl-clip border" class="cpr-nav-item"><a class="item" data-tab="cyberware">{{localize "CPRED.cyberware"}}</a></div>
     <div data-augmented-ui="tl-clip border" class="cpr-nav-item"><a class="item" data-tab="weapons">{{localize "CPRED.weapons"}}</a></div>
-    <div data-augmented-ui="tl-clip border" class="cpr-nav-item"><a class="item" data-tab="armor">{{localize "CPRED.armor"}}</a></div>
+    <div data-augmented-ui="tl-clip border" class="cpr-nav-item"><a class="item" data-tab="armor">{{localize "CPRED.armorheading"}}</a></div>
     <div data-augmented-ui="tl-clip border" class="cpr-nav-item"><a class="item" data-tab="gear">{{localize "CPRED.gear"}}</a></div>
     {{/if}}
     <div data-augmented-ui="tl-clip border" class="cpr-nav-item"><a class="item" data-tab="playernotes">{{localize "CPRED.playernotes"}}</a></div>
@@ -481,7 +481,9 @@
             <label class="cpr-weaponinlinebox">{{item.name}}<br>
               {{#if_not_eq data.ammotype.value "none"}}
               ({{localize "CPRED.ammo"}} {{item.data.ammo.value}}/{{item.data.ammo.max}})
-              &nbsp; <i class="reloadammo clickable" data-weaponid="{{item._id}}" >{{localize "CPRED.full"}}</i> &nbsp; <i class="alterammo clickable" data-weaponid="{{item._id}}" data-change="-1">-1</i> 
+              &nbsp; <i class="reloadammo clickable" data-weaponid="{{item._id}}" >{{localize "CPRED.full"}}</i>
+              &nbsp; <i class="alterammo clickable" data-weaponid="{{item._id}}" data-change="-1">-1</i>
+              &nbsp; <i class="alterammo clickable" data-weaponid="{{item._id}}" data-change="+1">+1</i>
               {{/if_not_eq}}
             </label>
               

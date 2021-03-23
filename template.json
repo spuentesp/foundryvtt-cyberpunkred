@@ -1056,7 +1056,7 @@
       "templates": ["general", "modlist"]
     },
     "armor": {
-      "templates": ["general","armorpiece","modList"]
+      "templates": ["general","armorpiece","modlist"]
     }
   }
 }

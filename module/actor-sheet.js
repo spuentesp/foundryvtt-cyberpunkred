@@ -259,7 +259,7 @@ export class cyberpunkredActorSheet extends ActorSheet {
       var newAblation = (item.data.ablation * 1) + (ablationchange * 1);
       actor.updateOwnedItem({
         _id: armorID,
-        "data.armor.ablation": newAblation
+        "data.ablation": newAblation
       });
     });
 

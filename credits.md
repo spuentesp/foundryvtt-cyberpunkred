@@ -13,3 +13,10 @@ French translation by Lightbringer#6269
 The new die code was added by njfox (https://github.com/njfox)
 
 Many thanks to all those in the #system-development channel who have helped answer questions as this was created, especially to the moderators who make a huge difference every day!
+
+### CREDITS - V2
+
+Thanks to everyone involved in the original Gerdofal version for their awesome effort.
+
+Thanks to the augmented-ui team. Much nicer borders now!
+

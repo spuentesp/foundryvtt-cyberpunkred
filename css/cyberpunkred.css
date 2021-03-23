@@ -1,200 +1,72 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
-
-@font-face {
-  /* Downloaded from https://www.futurafree.com/fonts/futura-medium-font-free-download/ */
-  font-family: 'Futura';
-  src: url('/systems/cyberpunkred/fonts/Futura Std Medium.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  /* Downloaded from https://www.futurafree.com/fonts/futura-heavy-font-free-download/ */
-  font-family: 'Futura';
-  src: url('/systems/cyberpunkred/fonts/Futura Std Heavy.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
+@import url("https://fonts.googleapis.com/css2?family=Martel:wght@400;800&family=Roboto:wght@300;400;500&display=swap");
 
 /* Primary Color Variables: */
 
 :root {
-  /****** Save for dark theme later ******
-  --cpr-red-color: #b00; 
-  --cpr-red-accent-color: #f00;
-  --cpr-red-dark-color: #700;
-  --cpr-text-color: #00d8d8;
-  --cpr-white-color: #ddd;
-  --cpr-light-bak-color: #242424; 
-  --cpr-app-bak-color: #181818;
-  --cpr-green-color: #18520b;  
-  */
-  --cpr-default-text-size: 1em;
-  --cpr-default-small-text-size: 0.9em;
-
-  --cpr-red-color: #d5230c; 
-  --cpr-red-accent-color: #f00;
-  --cpr-red-dark-color: #700;
-  --cpr-text-color: #222;
-  --cpr-text-dark-color: #4b4b4b;
-  --cpr-white-color: #000;
-  --cpr-light-bak-color: #e6e7e7; 
-  --cpr-accent-bak-color: #f0c7b8;
-  --cpr-app-bak-color: #f0f0f0;
-  --cpr-green-color: #18520b; 
+  --cpr-red-color: #fcec0c; /* var(--cpr-red-color) */
+  --cpr-red-bright-red: #bf0505; /* var(--cpr-red-color) */
+  --cpr-red-dark-red: #400000; /* var(--cpr-red-color) */
+  --cpr-light-bak-color: #444444; /* var(--cpr-light-bak-color) */
+  --cpr-app-bak-color: black; /* var(--cpr-app-bak-color) */
+  --cpr-green-color: #1b560d; /* var(--cpr-green-color) */
+  --cpr-default-text-size: .90em;
+  --cpr-default-small-text-size: .80em;
 }
 
-#combat li.combatant {
-  background-color: var(--cpr-accent-bak-color);
-  color: var(--cpr-text-color);
+.my-augfiguration {
+  --aug-tr: 25px;
+  --aug-bl: 57px;
+  --aug-br: 25px;
+  --aug-br-inset2: 40%;
+  --aug-border-all: 10px;
+  --aug-border-bg: linear-gradient(#400000, #600000);
 }
 
-
-#combat li.combatant.active {
-  background-color: var(--cpr-red-color);
-  color: var(--cpr-app-bak-color);
+/* overrides */
+.window-app .window-content {
+  background: none !important;
+  color: var(--cpr-red-color) !important;
 }
 
-
-/* General UI styling */
-form .notes, form .hint {
-  color: var(--cpr-text-dark-color);
+#module-management .package-list .package-title, #module-management .package-list .package-metadata, #module-management .package-list .package-description {
+  color: white !important;
 }
 
-button, form button, .dialog .dialog-buttons button {
-  background-color: var(--cpr-light-bak-color);
-  border-color: var(--cpr-red-color);
-  color: var(--cpr-text-color);
+select {
+  color: var(--cpr-red-bright-red) !important;
 }
 
-button:hover, button:focus {
-  box-shadow: 0 0 3px var(--cpr-red-color);
+button {
+  border: 2px solid var(--cpr-red-color) !important;
+  background-color: var(--cpr-red-dark-red) !important;
+  color: var(--cpr-red-color) !important;
 }
 
-.dialog .dialog-buttons button.default {
-  background-color: var(--cpr-accent-bak-color);
-  border-color: var(--cpr-red-color);
-  color: var(--cpr-text-color);
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="date"],
+input[type="time"] {
+  border: 2px solid #7a7971 !important;
+  color: var(--cpr-red-color) !important;
 }
 
-select, input[type="text"], input[type="number"], input[type="password"], input[type="date"], input[type="time"] {
-  background-color: var(--cpr-light-bak-color);
-  border-color: var(--cpr-red-color);
-  color: var(--cpr-text-color);
-}
-
-select:focus, 
-input[type="text"]:focus, 
-input[type="number"]:focus, 
+input[type="text"]:focus,
+input[type="number"]:focus,
 input[type="password"]:focus,
-input[type="date"]:focus, 
-input[type="time"]:focus {
-  /* TODO: make shadow settings a variable */
-  box-shadow: 0 0 3px var(--cpr-red-color);
-}
- 
-h2 {
-  font-family: 'Russo One';
-  font-size: 20pt;
+input[type="date"]:focus,
+input[type="time"]:focus{
+  color: white;
 }
 
-#sidebar {
-  border-radius: 0;
-  border: none;
-  background: transparent;
-  box-shadow: none;
+form .form-group label {
+  color: var(--cpr-red-color) !important;
 }
 
-#sidebar-tabs {
-  border: none;
-  box-shadow: none;
-  margin-bottom: 0;
+.window-app .window-content {
+  color: var(--cpr-red-color) !important;
 }
 
-#sidebar-tabs a {
-  --aug-border-bg: var(--cpr-red-color);
-  --aug-border-y: 2px;
-  --aug-border-x: 1px;
-  --aug-tl: 5px;
-  --aug-tr: 5px;
-}
-
-#sidebar.collapsed #sidebar-tabs > .item.active {
-  border-bottom: none;
-  border-radius: none;
-}
-
-#sidebar.collapsed #sidebar-tabs {
-  flex-direction: column;
-}
-
-#sidebar.collapsed #sidebar-tabs a {
-  --aug-tl: 0px;
-  --aug-tr: 0px;
-}
-
-#sidebar.collapsed #sidebar-tabs a:first-child {
-  --aug-tl: 5px;
-  --aug-tr: 5px;
-}
-
-#sidebar-tabs a.item {
-  background-color: var(--cpr-red-color);
-  color: var(--cpr-app-bak-color);
-  border-radius: 0;
-  flex: 1;
-}
-
-#sidebar-tabs a.item:hover, #sidebar-tabs >.collapse:hover {
-  color: var(--cpr-accent-bak-color);
-}
-
-#sidebar-tabs a.item:first-child {
-  --aug-tl: 0px;
-  --aug-border-left: 2px;
-}
-
-#sidebar-tabs > .item.active {
-  border: none;
-  box-shadow: none;
-}
-
-#sidebar-tabs > .collapse {
-  background-color: var(--cpr-red-color);
-  color: var(--cpr-app-bak-color);
-  --aug-border-bg: var(--cpr-red-color);
-  --aug-border-all: 1px;
-  --aug-tr: 0px;
-  --aug-border-right: 2px;
-}
-
-#sidebar .sidebar-tab {
-  background: var(--cpr-app-bak-color);
-  border: 3px solid;
-  border-top: 1px;
-  border-color: var(--cpr-red-color);
-}
-
-#chat-controls select.roll-type-select {
-  background: var(--cpr-light-bak-color);
-  color: var(--cpr-text-color);
-}
-
-#chat-form > textarea:focus {
-  outline: none;
-  box-shadow: 0 0 3px var(--cpr-red-color) !important;
-}
-
-#chat-form #chat-message {
-  background: var(--cpr-light-bak-color);
-  border-color: var(--cpr-red-color);
-  box-shadow: none;
-}
-
-.setcurrenthealth {
-  color: var(--cpr-red-color);
-}
 
 /* Roll Template */
 
@@ -211,6 +83,14 @@ span.part-formula {
   font-size: 1.5em;
   border-bottom: 2px solid var(--cpr-red-color);
 }
+
+.cpr-roll-brightred {
+  color: var(--cpr-red-bright-red);
+}
+.cpr-roll-bigletters {
+  font-size: 1.5em;
+}
+
 
 .cpr-roll-flavor {
   font-size: .8em;
@@ -239,8 +119,7 @@ span.part-formula {
 }
 
 .cpr-roll-showtagslink {
-  font-size: 0.8em;
-  text-decoration: underline;
+  font-size: .5em;
 }
 
 .cpr-roll-crit-success {
@@ -249,13 +128,13 @@ span.part-formula {
 
 /* Rolls */
 .dice-roll .dice-formula {
-  background: #FFFFFF;
+  background: #000000;
   display: block;
   padding-left: 10px;
   padding-right: 10px;
 }
 .dice-roll .dice-total {
-  background: #FFAAAA;
+  background: #4c1414;
   display: inline-block;
   font-weight: normal;
   padding: 0px 10px 0px 10px;
@@ -274,7 +153,7 @@ span.part-formula {
   top: -23px;
 }
 .dice-roll .dice-tooltip {
-  background: #FFEEEE;
+  background: #110000;
   padding-left: 10px;
   padding-right: 10px;
   display: inline-block;
@@ -306,111 +185,17 @@ span.part-formula {
 
 /* Set default font */
 .window-app {
-  font-family: 'Futura', sans-serif;
-  font-size: var(--cpr-default-text-size);
-}
-
-.window-app .window-header {
-  border: none;
-  background-color: var(--cpr-red-color);
-  color: var(--cpr-app-bak-color);
-  border-radius: 5px 5px 0 0;
-}
-
-.window-app .window-resizable-handle {
-  background-color: var(--cpr-red-color);
-  border-color: var(--cpr-red-accent-color);
-  color: var(--cpr-app-bak-color);
-}
-
-.window-app .window-resizable-handle:hover {
-  color: var(--cpr-accent-bak-color); 
-} 
-
-.window-app .window-content {
-  background: none;
-  background-color: var(--cpr-app-bak-color);
-  color: var(--cpr-text-color); 
-}
-
-.window-app .disclaimer {
-  font-size: 0.8em;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  text-align: center;
+  font-family: "Roboto", sans-serif;
 }
 
 /* Add graphical border around this block */
-.cyberpunkred .cprgraphics {
-  font-family: "Futura";
-  border: none;
+.cyberpunkred .cprgraphics, #chat-log .message {
   background: var(--cpr-app-bak-color);
-  color: var(--cpr-text-color);
-  padding: 5px 10px 10px 10px;
-
-  --aug-border-bg: var(--cpr-red-color);
-  --aug-border-y: 1px;
-  --aug-border-x: 1px;
-
-  --aug-inlay: initial;
-  --aug-inlay-bg: var(--cpr-light-bak-color);
-
-  --aug-tl: 5px;
-  --aug-tr: 5px;
-  --aug-bl: 5px;
-  --aug-br: 5px;
-}
-
-#chat-log .message, #chat-log .message .whisper {
-  font-family: "Futura";
-  border: none;
-  background: var(--cpr-app-bak-color);
-  color: var(--cpr-text-color);
-  padding: 5px 10px 10px 10px;
-
-  --aug-border-bg: var(--cpr-red-color);
-  --aug-border-y: 1px;
-  --aug-border-left: 0px;
-  --aug-border-right: 1px;
-
-  --aug-inlay: initial;
-  --aug-inlay-bg: var(--cpr-light-bak-color);
-
-  --aug-br: 5px;
-  --aug-br-inset1: 8%;
-}
-
-#chat-log .chat-message {
-  padding-left: 3px;
-  padding-right: 4px;
-  padding-top: 3px;
-}
-
-#chat-log .whisper {
-  --aug-inlay-bg: var(--cpr-accent-bak-color);
-}
-
-#chat-log .message-header {
-  background-color: var(--cpr-red-color);
-  color: var(--cpr-app-bak-color);
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#chat-log .message-sender, #chat-log .message-metadata {
-  font-family: "Futura";
-  font-weight: bold;
-}
-
-#chat-log .message-content {
-  padding-top: 5px;
-  padding-left: 5px;
-  padding-right: 10px;
-}
-
-#chat-log i.fas.fa-trash::before {
-  color: var(--cpr-red-accent-color);
-  background: var(--cpr-light-bak-color);
+  color: var(--cpr-red-color);
+  padding-top: 9px !important;
+  padding-bottom: 3px !important; 
+  box-sizing: border-box;
+  image-rendering: crisp-edges;
 }
 
 /* Redefine look of screen elements */
@@ -424,23 +209,13 @@ span.part-formula {
 }
 
 .app {
-  background: none;
-  background-color: var(--cpr-app-bak-color);
-  color: var(--cpr-red-color);
-  box-shadow: 0 0 10px var(--cpr-red-color);
-  padding: 0 !important;
-}
-
-#sidebar-tabs > .item, #players {
-  color: var(--cpr-red-color);
-  border: 1px solid var(--cpr-red-color);
   background: var(--cpr-app-bak-color);
+  color: var(--cpr-red-color);
 }
 
-#sidebar-tabs > .item.active {
-  color: var(--cpr-red-accent-color);
-  border-color: var(--cpr-red-accent-color);
-  background-color: var(--cpr-light-bak-color);
+#sidebar-tabs > .item.active, #sidebar-tabs > .item, #players {
+  color: var(--cpr-red-color);
+  background: var(--cpr-app-bak-color);
 }
 
 .button {
@@ -448,41 +223,12 @@ span.part-formula {
   color: var(--cpr-red-color);
 }
 
-.sidebar-tab .directory-list .directory-item {
-  color: var(--cpr-app-bak-color);
-  background: var(--cpr-red-color);
-}
-
 .sidebar-tab .directory-list .entity {
-  border-color: var(--cpr-accent-bak-color);
-}
-
-li.folder.collapsed > .folder-header {
-  color:  var(--cpr-text-color);
-}
-
-li.folder > .folder-header h3 {
-  color:  var(--cpr-text-color);
-}
-
-li.folder > .folder-header .create-folder {
-  color: var(--cpr-text-color);
-}
-
-li.folder > .folder-header .create-entity {
-  color: var(--cpr-text-color);
-}
-
-.directory-list .entity {
   background: var(--cpr-app-bak-color);
 }
 
-.subdirectory {
-  border-color: var(--cpr-app-bak-color);
-}
-
 #playlists li.playlist .sound-control {
-  color: var(--cpr-app-bak-color);
+  color: var(--cpr-red-color);
 }
 
 /* Make sure this block has room to edit */
@@ -510,33 +256,33 @@ li.folder > .folder-header .create-entity {
 /* General Style Elements */
 
 .cyberpunkred h1 {
-  font-family: 'Russo One', sans-serif;
   display: block;
   font-size: 2.15em;
   margin-block-start: 5px;
   margin-block-end: 0px;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+  font-weight: bold;
 }
 
 .cyberpunkred h2 {
-  font-family: 'Russo One', sans-serif;
   display: block;
   font-size: 1.75em;
-  margin-block-start: 1px;
-  margin-block-end: 4px;
+  margin-block-start: 5px;
+  margin-block-end: 0px;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+  font-weight: bold;
 }
 
 .cyberpunkred h3 {
-  font-family: 'Russo One', sans-serif;
   display: block;
   font-size: 1.15em;
-  margin-block-start: 2px;
-  margin-block-end: 3px;
+  margin-block-start: 5px;
+  margin-block-end: 0px;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+  font-weight: bold;
 }
 
 .cyberpunkred h4 {
@@ -562,14 +308,16 @@ li.folder > .folder-header .create-entity {
 /* Main grid with header, left nav, and right content */
 .cyberpunkred .cpr-grid {
   display: grid;
-  grid-template-columns: 90px auto;
-  grid-template-rows: 40px auto;;
+  grid-template-columns: 115px auto;
+  grid-template-rows: 40px auto;
   padding: 3px;
+  padding-right:-3px;
 }
 .cyberpunkred .cpr-header {
   grid-column: 1 / span 2;
   grid-row: 1;
   border: none;
+  border-bottom: 1px solid #222;
   padding: 3px;
 }
 .cyberpunkred .cpr-nav {
@@ -580,46 +328,50 @@ li.folder > .folder-header .create-entity {
   grid-template-columns: auto;
   grid-template-rows: auto;
   align-content: start;
+  border-right: 1px solid #222;
   padding: 0px 0px 0px 0px;
-  margin: 0px 0px 0px 0px;
+  margin: 30px 0px 0px 0px;
 }
 .cyberpunkred .cpr-content {
   grid-column: 2;
   grid-row: 2;
   border: none;
-  padding: 3px;
+  padding: 7px;
   vertical-align: top;
   text-align: left;
 }
 
 /* Navigation grid styles */
 .cyberpunkred .cpr-nav .cpr-nav-item {
-  outline: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
+  justify-self: start;
+  display: block;
+  height: 30px;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  overflow: visible;
+  white-space: nowrap;
 }
-
 .cyberpunkred .cpr-nav .cpr-nav-item .item {
-  color: var(--cpr-text-color);
-  font-size: 0.9em;
-  padding: 4px 4px 4px 8px;
-  margin: 0 0 2px 0;
-  flex: 1;
-
-  --aug-br: 5px;
-  --aug-border-y: 1px;
-  --aug-border-left: 3px;
-  --aug-border-right: 1px;
-  --aug-border-bg: var(--cpr-red-color);
-
-  --aug-inlay-bg: var(--cpr-light-bak-color);
+  font-weight: normal;
+  display: block;
+  width: 100%;
+  padding: 5px 5px 5px 20px;
+  margin: 0px;
+  height: 30px;
+  background: var(--cpr-red-dark-red);
+  font-size: var(--cpr-default-text-size);
+  white-space: nowrap;
 }
-
-.cyberpunkred .cpr-nav .cpr-nav-item .item.active, .cyberpunkred .cpr-nav .cpr-nav-item .item:hover {
-  color: var(--cpr-red-color);
+.cyberpunkred .cpr-nav .cpr-nav-item .item.active {
   text-shadow: none;
-  --aug-inlay-bg: var(--cpr-accent-bak-color);
+  font-weight: bold;
+  padding: 5px 5px 5px 20px;
+  margin: 0px;
+  height: 30px;
+  background: linear-gradient(var(--cpr-red-bright-red),var(--cpr-red-bright-red));
+  font-size: var(--cpr-default-text-size);
 }
 
 /* General code for hover indications of rollable and clickable */
@@ -645,6 +397,16 @@ li.folder > .folder-header .create-entity {
 .cyberpunkred .npcrollable:hover, .cyberpunkred .npcrollable:focus, .cyberpunkred .rollable:hover, .cyberpunkred .rollable:focus, .cyberpunkred .clickable:focus, .cyberpunkred .clickable:hover, .cyberpunkred .cpr-nav .cpr-nav-item .item:hover, .cpr-roll-showtagslink:hover {
   color: var(--cpr-red-color);
   cursor: pointer;
+  text-shadow:
+    0 0 1px #fff,
+    0 0 2px #fff,
+    0 0 3px #fff,
+    0 0 4px #f00,
+    0 0 5px #f00,
+    0 0 6px #f00,
+    0 0 70px #f00,
+    0 0 8px #f00;
+
 }
 
 /* Welcome and Conversion Status Grid */
@@ -693,9 +455,10 @@ li.folder > .folder-header .create-entity {
 }
 
 .cyberpunkred .humanityButton {
-  background-color: #FF9799;
+  background-color: var(--cpr-red-dark-red);
   color: black;
 }
+
 
 /* Attributes and Skills Tab */
 .cyberpunkred .width50 {
@@ -711,18 +474,12 @@ li.folder > .folder-header .create-entity {
 .cyberpunkred .atrnskill-grid {
   display: grid;
   grid-row-gap: 5px;
-  margin: 0;
-  padding: 5px;
+  margin: 0px;
+  padding: 0px;
   grid-template-columns: 200px 50px 50px 50px 50px;
   align-items: center;
   justify-items: left;
   font-size: var(--cpr-default-text-size);
-
-  --aug-border-left: 1px;
-  --aug-br-inset1: 0%;
-
-  --aug-border-bg: var(--cpr-red-color);
-  --aug-tl: 5px;
 }
 .cyberpunkred .atrnskill-grid input {
   text-align: center;
@@ -884,7 +641,7 @@ li.folder > .folder-header .create-entity {
 }
 
 .cyberpunkred input.settings[type=checkbox]:checked + label {
-  background-color: #90FF90;
+  background-color: #0b400b;
 	font-weight: bold;
   border: 1px solid var(--cpr-red-color);
   border-color: var(--cpr-red-color);
@@ -953,7 +710,7 @@ li.folder > .folder-header .create-entity {
 }
 
 .cyberpunkred input.modlist[type=checkbox]:checked + label {
-  background-color: #FF9090;
+  background-color: var(--cpr-red-dark-red);;
 	font-weight: bold;
   border: 1px solid var(--cpr-red-color);
   border-color: var(--cpr-red-color);
@@ -971,7 +728,7 @@ li.folder > .folder-header .create-entity {
 }
 
 .cyberpunkred input:read-only {
-  background-color: #DCA9AA;
+  background-color: var(--cpr-red-dark-red);;
 }
 
 /* Grid Setups */
@@ -1030,108 +787,7 @@ li.folder > .folder-header .create-entity {
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
-/* Redefine general sheet styling with Augmented-UI */
-/* TODO: move this new stuff to more logical areas of the CSS */
 
-.window-title {
-  font-family: 'Futura', sans-serif;
-  font-weight: bold;
-}
-
-header.window-header {
-  color: var(--cpr-white-color);
-}
-
-header.sheet-header {
-  color: var(--cpr-red-accent-color);
-}
-
-.sheet header.sheet-header img {
-  border: none;
-  background: none;
-}
-
-.sheet header.sheet-header .profile-img-container, .profile-img-container { 
-  --aug-border-all: 1px;
-  --aug-border-bg: var(--cpr-red-color);
-  --aug-inlay-bg: var(--cpr-accent-bak-color);
-  padding: 6px 1px 4px 4px;
-  flex: none;
-  display: inline-block;
-  --aug-br: 10px;
-}
-
-img.profile-img {
-  border: none;
-}
-
-.sheet nav.sheet-tabs {
-  border-top: none;
-  border-bottom: none;
-}
-
-.sheet input, .sheet select {
-  font-family: 'Futura', sans-serif;
-  color: var(--cpr-text-color);
-  background-color: var(--cpr-light-bak-color);
-  border-color: var(--cpr-red-color);
-  outline-color: var(--cpr-red-color);
-}
-
-.sheet header.sheet-header h1 input {
-  font-family: 'Russo One', sans-serif;
-  background-color: var(--cpr-app-bak-color);
-  border-color: var(--cpr-app-bak-color);
-  margin-left: 3px;
-}
-
-.sheet header.sheet-header h1 input:hover {
-  border: 1px solid var(--cpr-red-color)
-}
-
-.editor-edit {
-  background: var(--cpr-light-bak-color);
-  border-color: var(--cpr-red-accent-color);
-}
-
-.sheet input:focus {
-  background-color: var(--cpr-app-bak-color);
-}
-
-.sheet header {
-  padding-bottom: 1em;
-}
-
-.sheet nav.sheet-tabs .item {
-  color: var(--cpr-text-color);
-  margin-left: 5px;
-  margin-right: 5px;
-  --aug-border-bg: var(--cpr-red-color);
-  --aug-border-y: 1px;
-  --aug-border-right: 1px;
-  --aug-border-left: 5px;
-  --aug-border: initial;
-  --aug-inlay-bg: var(--cpr-light-bak-color);
-  --aug-inlay-all: 2px;
-  --aug-br1: 6px;
-  --aug-tr: 3px;
-  --aug-tr-inset2: 80%;
-}
-
-.sheet nav.sheet-tabs .item:hover, .sheet nav.sheet-tabs .item.active {
-  --aug-border-bg: var(--cpr-red-color);
-  --aug-inlay-bg: var(--cpr-accent-bak-color);
-  text-shadow: none;
-  color: var(--cpr-red-color);
-}
-
-.sheet nav.sheet-tabs .item:first-child {
-  margin-left: 0px;
-}
-
-.sheet nav.sheet-tabs .item:last-child {
-  margin-right: 0px;
-}
 
 /* NPC Sheet*/
 .cyberpunkred .npc-buttonlabel {
@@ -1150,7 +806,7 @@ img.profile-img {
 .cyberpunkred .npc-button-array button {
   border: 0px solid green; /* Green border */
   color: white;
-  background-color: #702020;
+  background-color: var(--cpr-red-dark-red);;
   cursor: pointer; /* Pointer/hand icon */
   float: left; /* Float the buttons side by side */
   box-sizing: border-box;
@@ -1204,11 +860,9 @@ img.profile-img {
 
 /* Legacy CSS left over from Boilerplate */
 .cyberpunkred .tox .tox-editor-container {
-  background: var(--cpr-app-bak-color);
+  background: #fff;
 }
-
 .cyberpunkred .tox .tox-edit-area {
-  color: var(--cpr-text-color);
   padding: 0 8px;
 }
 

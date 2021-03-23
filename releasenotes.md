@@ -1,8 +1,28 @@
-Sections: 
-- [In Development](#in-development)
-- [Future Plans](#future-plans)
-- [Release Notes](#release-notes)
+### CURRENT RELEASE NOTES:
+### Known Issues
 
+Live: None
+
+
+### Future Plans
+
+- Continued implementation of core rulebook rules
+
+- UI cleanup and usability improvements
+
+- Better access to character information, and roll automation.
+
+- Stop using a branch and really using the "development" one for dev, and leaving stable for releases.
+
+### Release Notes
+
+- 0.500 - Released 23/3 - Bugfix release
+  - Added armor as items. they can be used in the combat section, with ablation counters.
+  - Added cyberware classification, now cyberware is listed ordered by body part.
+  - Added some CSS improvements. Color palette chosen from the CP2077 game (i like it. thats it).
+
+
+### GERDOFAL'S RELEASE NOTES
 ### Known Issues
 
 Live: None

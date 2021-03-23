@@ -315,7 +315,8 @@ Hooks.once('init', async function () {
   });
 
   Handlebars.registerHelper('cyberware_sort', function(list, opts) {
-    return list.sort((a, b) => (a.data.location.value > b.data.location.value) ? 1 : -1);
+    list = list.sort((a, b) => (a.data.location.value > b.data.location.value) ? 1 : -1);
+    return list;
   });
 
 });

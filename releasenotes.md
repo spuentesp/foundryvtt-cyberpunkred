@@ -16,6 +16,9 @@ Live: None
 
 ### Release Notes
 
+- 0.501 - Released 24/3 - Bugfix release
+  - Added borders to tabs and rolls.
+
 - 0.500 - Released 23/3 - Bugfix release
   - Added armor as items. they can be used in the combat section, with ablation counters.
   - Added cyberware classification, now cyberware is listed ordered by body part.

@@ -178,7 +178,7 @@
       </div>
     </div>
     {{!-- Humanity Tab --}}
-    <div class="tab cprgraphics" data-group="primary" data-tab="humanityarray"> {{localize "CPRED.underconstruction"}}
+    <div class="tab cprgraphics" data-group="primary" data-tab="humanityarray">
       <div class="grid grid-3col">
         <div class="grid">Total Humanity: {{data.backend.humanityTotal}}</div>
         <div class="grid">Total Positive: {{data.backend.humanityPositive}}</div>
@@ -529,7 +529,7 @@
     {{#if data.settings.showtabs.netrunner}}
     {{!-- Hacking Tab --}}
     <div class="tab cprgraphics" data-group="primary" data-tab="hacking"> <br>
-      {{localize "CPRED.underconstruction"}} <br>
+       <br>
       <hr>
       <h3>{{localize "CPRED.actions"}}</h3>
       <label for="Initiative" data-label='{{localize "CPRED.initiative"}}' data-roll="{{rollInitiative}}" class="rollable">{{localize "CPRED.initiative"}}</label>
@@ -567,8 +567,8 @@
         {{#each (cyberware_sort actor.cyberware) as |item id|}}
         <li class="item flexrow" data-item-id="{{item._id}}">
           <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-          <h4 class="item-name">{{item.name}} {{item.data.location}}</h4>
-          <h4 class="item-name cpr-roll-brightred" >{{localize (concat "CPRED." item.data.location)}}</h4>
+          <h4 class="item-name">{{item.name}}</h4>
+          <h4 class="item-name cpr-roll-brightred" >{{localize (concat "CPRED." item.data.location.value)}}</h4>
           <div class="item-controls"> <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a> <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a> </div>
         </li>
         {{/each}}
